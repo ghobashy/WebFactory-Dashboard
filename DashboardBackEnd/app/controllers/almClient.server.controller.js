@@ -12,7 +12,7 @@ function Login() {
         "domain": config.appSettings.alm.Domain,
         "project": config.appSettings.alm.Project,
         "user": "eg_melzouhery",
-        "password": "Maged221289!"
+        "password": ""
     });
 };
 
