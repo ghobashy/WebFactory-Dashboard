@@ -19,7 +19,7 @@ exports.appSettings = {
         LockEntity:"/qcbin/rest/domains/"+_domain+"/projects/"+_Project+"/{Entity Type}/{Entity ID}/lock" ,
         EntityCollection:"/{Entity Type}s/",
         Entity:"/{Entity Type}s/{Entity ID}" ,
-        EntityHistory:"/qcbin/rest/domains/"+_domain+"/projects/"+_Project+"/{Entity Type}s/{Entity ID}/audits" ,
+        EntityHistory:"/{Entity Type}s/{Entity ID}/audits" ,
         IsAuthenticated:"/qcbin/rest/is-authenticated" ,
         SessionAddress:"/qcbin/rest/site-session"
     }

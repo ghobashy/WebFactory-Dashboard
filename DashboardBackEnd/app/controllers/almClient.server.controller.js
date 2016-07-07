@@ -36,10 +36,10 @@ exports.getAllDefects = function (req, res) {
 };
 
 exports.getDefect = function (req, res) {
-    var defectURL = config.appSettings.alm.Entity.replace("{Entity Type}", "defect").replace("{Entity ID}",req.params.id);
+    var defectURL = config.appSettings.alm.Entity.replace("{Entity Type}", "defect").replace("{Entity ID}", req.params.id);
     Login().then(
         function () {
-            qcApi.get(defectsURL)
+            qcApi.get(defectURL)
                 .then(function (defect) {
                     console.log("got $s defects", defect.length);
                     res.send(defect);
@@ -50,5 +50,65 @@ exports.getDefect = function (req, res) {
         }, function (err) {
             console.log("oh shit, something went awry!");
             res.send("oh shit, something went awry!")
+        });
+};
+
+exports.getDefectHistory = function (req, res) {
+    var defectURL = config.appSettings.alm.EntityHistory.replace("{Entity Type}", "defect").replace("{Entity ID}", req.params.id);
+    Login().then(
+        function () {
+            qcApi.get(defectURL)
+                .then(function (defect) {
+                    console.log("got $s defects", defect.length);
+                    res.send(defect);
+                }, function (err) {
+                    console.log("error occured: %s", err);
+                    res.send("error occured: %s", err);
+                });
+        }, function (err) {
+            console.log("oh shit, something went awry!");
+            res.send("oh shit, something went awry!")
+        });
+};
+
+exports.getUsersDefects = function (req, res) {
+    var defectsURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "defect");
+
+    Login().then(
+        function () {
+            console.log(req.params.users.split(',').join(' or '));
+            qcApi.get(defectsURL+"?query={ owner[= " + req.params.users.split(',').join(' or ') + "]}", {pageSize: 'max'})
+                .then(function (defects) {
+                    console.log("got $s defects", defects.length);
+                    res.send(defects);
+                }, function (err) {
+                    console.log("error occured: %s", err);
+                    res.send("error occured: %s", err);
+                });
+        }, function (err) {
+            console.log("oh shit, something went awry! "+err);
+            res.send("oh shit, something went awry! "+err)
+        });
+};
+
+
+
+exports.getStatusDefects = function (req, res) {
+    var defectsURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "defect");
+
+    Login().then(
+        function () {
+            console.log(req.params.status.split(',').join(' or '));
+            qcApi.get(defectsURL+"?query={ status[= " + req.params.status.split(',').join(' or ') + "]}", {pageSize: 'max'})
+                .then(function (defects) {
+                    console.log("got $s defects", defects.length);
+                    res.send(defects);
+                }, function (err) {
+                    console.log("error occured: %s", err);
+                    res.send("error occured: %s", err);
+                });
+        }, function (err) {
+            console.log("oh shit, something went awry! "+err);
+            res.send("oh shit, something went awry! "+err)
         });
 };
