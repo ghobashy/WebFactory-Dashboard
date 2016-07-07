@@ -30,8 +30,8 @@ exports.getAllDefects = function (req, res) {
                     res.send("error occured: %s", err);
                 });
         }, function (err) {
-            console.log("oh shit, something went awry!");
-            res.send("oh shit, something went awry!")
+            console.log("error occured: %s", err);
+            res.send("error occured: %s", err);
         });
 };
 
@@ -48,8 +48,8 @@ exports.getDefect = function (req, res) {
                     res.send("error occured: %s", err);
                 });
         }, function (err) {
-            console.log("oh shit, something went awry!");
-            res.send("oh shit, something went awry!")
+            console.log("error occured: %s", err);
+            res.send("error occured: %s", err);
         });
 };
 
@@ -66,8 +66,8 @@ exports.getDefectHistory = function (req, res) {
                     res.send("error occured: %s", err);
                 });
         }, function (err) {
-            console.log("oh shit, something went awry!");
-            res.send("oh shit, something went awry!")
+            console.log("error occured: %s", err);
+            res.send("error occured: %s", err);
         });
 };
 
@@ -86,8 +86,8 @@ exports.getUsersDefects = function (req, res) {
                     res.send("error occured: %s", err);
                 });
         }, function (err) {
-            console.log("oh shit, something went awry! "+err);
-            res.send("oh shit, something went awry! "+err)
+            console.log("error occured: %s", err);
+            res.send("error occured: %s", err);
         });
 };
 
@@ -108,7 +108,7 @@ exports.getStatusDefects = function (req, res) {
                     res.send("error occured: %s", err);
                 });
         }, function (err) {
-            console.log("oh shit, something went awry! "+err);
-            res.send("oh shit, something went awry! "+err)
+            console.log("error occured: %s", err);
+            res.send("error occured: %s", err);
         });
 };
