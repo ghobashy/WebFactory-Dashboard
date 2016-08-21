@@ -4,7 +4,7 @@ var config = require('../../config/config.js'),
     _ = require('lodash'),
     https = require('https'),
     http = require('http'),
-    qcApi = require("qc.js").create();
+    qcApi = require("../../app/controllers/qcApi.js").create();
 
 function Login() {
     return qcApi.login({
