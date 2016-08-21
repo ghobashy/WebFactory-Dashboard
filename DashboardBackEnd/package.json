@@ -9,14 +9,13 @@
   "author": "VIS FE Team",
   "license": "ISC",
   "dependencies": {
-    "QC.js": "git+https://github.com/ddikman/QC.js.git",
+    "qc.js": "git+https://github.com/ddikman/QC.js.git",
     "body-parser": "^1.15.2",
     "exports": "0.0.1",
     "express": "^4.14.0",
     "http": "0.0.0",
     "https": "^1.0.0",
     "lodash": "^4.13.1",
-    "mongoose": "^4.5.3",
-    "qc.js": "git+https://github.com/ddikman/QC.js.git"
+    "mongoose": "^4.5.3"
   }
 }
