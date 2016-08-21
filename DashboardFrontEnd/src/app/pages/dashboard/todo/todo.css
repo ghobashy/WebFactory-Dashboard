@@ -1,0 +1,133 @@
+input.task-todo {
+  margin-bottom: 8px; }
+
+ul.todo-list {
+  margin: 0;
+  padding: 0; }
+  ul.todo-list li {
+    margin: 0 0 -1px 0;
+    padding: 12px;
+    list-style: none;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    cursor: grab;
+    height: 42px; }
+    ul.todo-list li i.remove-todo {
+      position: absolute;
+      cursor: pointer;
+      top: 0px;
+      right: 12px;
+      font-size: 32px;
+      transition: color 0.2s;
+      color: rgba(255, 255, 255, 0.5);
+      visibility: hidden;
+      line-height: 42px; }
+      ul.todo-list li i.remove-todo:hover {
+        color: rgba(255, 255, 255, 0.6); }
+    ul.todo-list li:hover i.remove-todo {
+      visibility: visible; }
+    ul.todo-list li.checked .todo-text {
+      color: #ffffff; }
+    ul.todo-list li.checked:before {
+      background: rgba(255, 255, 255, 0.6) !important; }
+    ul.todo-list li i.mark {
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      height: 42px;
+      min-width: 4px;
+      background: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      transition: min-width 0.3s ease-out; }
+    ul.todo-list li.active i.mark {
+      min-width: 40px; }
+    ul.todo-list li.active label.todo-checkbox > span:before {
+      color: white;
+      content: '\f10c';
+      margin-right: 20px;
+      transition: margin-right 0.1s ease-out;
+      transition-delay: 0.2s;
+      float: none; }
+    ul.todo-list li.active label.todo-checkbox > input:checked + span:before {
+      content: '\f00c'; }
+
+label.todo-checkbox {
+  width: 100%;
+  padding-right: 25px;
+  min-height: 16px;
+  cursor: pointer; }
+  label.todo-checkbox > span {
+    white-space: nowrap;
+    height: 16px; }
+    label.todo-checkbox > span:before {
+      border: none;
+      color: #ffffff;
+      transition: all 0.15s ease-out; }
+
+.add-item-icon {
+  display: none; }
+
+.ng2 .task-todo-container .todo-panel.panel, .blur .task-todo-container .todo-panel.panel {
+  color: white;
+  opacity: 0.9; }
+.ng2 .task-todo-container input.task-todo, .blur .task-todo-container input.task-todo {
+  color: white;
+  width: calc(100% - 25px);
+  border-radius: 0;
+  border: none;
+  background: transparent; }
+  .ng2 .task-todo-container input.task-todo:focus, .blur .task-todo-container input.task-todo:focus {
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12); }
+.ng2 .task-todo-container .add-item-icon, .blur .task-todo-container .add-item-icon {
+  display: block;
+  float: right;
+  margin-top: -45px;
+  margin-right: 5px;
+  font-size: 25px;
+  cursor: pointer; }
+.ng2 .task-todo-container ul.todo-list li, .blur .task-todo-container ul.todo-list li {
+  margin: 0;
+  border: none;
+  font-weight: 300; }
+  .ng2 .task-todo-container ul.todo-list li .blur-container, .blur .task-todo-container ul.todo-list li .blur-container {
+    height: 40px;
+    position: absolute;
+    width: calc(100% + 40px);
+    top: 0;
+    left: -25px;
+    overflow-y: hidden; }
+  .ng2 .task-todo-container ul.todo-list li:hover .blur-container, .blur .task-todo-container ul.todo-list li:hover .blur-container {
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12); }
+  .ng2 .task-todo-container ul.todo-list li:hover .blur-box, .blur .task-todo-container ul.todo-list li:hover .blur-box {
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-filter: blur(3px); }
+  .ng2 .task-todo-container ul.todo-list li i.remove-todo, .blur .task-todo-container ul.todo-list li i.remove-todo {
+    color: white;
+    opacity: 0.4; }
+    .ng2 .task-todo-container ul.todo-list li i.remove-todo:hover, .blur .task-todo-container ul.todo-list li i.remove-todo:hover {
+      color: white;
+      opacity: 0.95; }
+  .ng2 .task-todo-container ul.todo-list li i.mark, .blur .task-todo-container ul.todo-list li i.mark {
+    min-width: 40px;
+    display: none; }
+  .ng2 .task-todo-container ul.todo-list li label.todo-checkbox > span:before, .blur .task-todo-container ul.todo-list li label.todo-checkbox > span:before {
+    position: absolute;
+    color: #ffffff;
+    content: '\f10c';
+    float: none;
+    margin-right: 6px;
+    transition: none; }
+  .ng2 .task-todo-container ul.todo-list li.checked label.todo-checkbox > span:before, .blur .task-todo-container ul.todo-list li.checked label.todo-checkbox > span:before {
+    content: '\f00c'; }
+.ng2 .task-todo-container .box-shadow-border, .blur .task-todo-container .box-shadow-border {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12);
+  width: calc(100% + 44px);
+  margin-left: -22px; }
+
+/*# sourceMappingURL=todo.css.map */

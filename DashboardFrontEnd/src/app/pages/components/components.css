@@ -1,0 +1,16 @@
+#tree-view .tree .node-value {
+  color: white; }
+#tree-view .tree .folding.node-expanded::before {
+  color: white; }
+#tree-view .tree .folding.node-collapsed::before {
+  color: white; }
+#tree-view .tree .folding.node-leaf::before {
+  color: white; }
+#tree-view .tree .over-drop-target {
+  border: 4px solid ghostwhite; }
+#tree-view .tree .node-value .node-selected::after {
+  background-color: white; }
+#tree-view .tree .node-value:after {
+  background-color: white; }
+
+/*# sourceMappingURL=components.css.map */
