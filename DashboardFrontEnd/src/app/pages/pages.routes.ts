@@ -42,7 +42,7 @@ export const PagesRoutes:RouterConfig = [
           }
         }
       },
-      {
+      /*{
         path: 'editors',
         component: Editors,
         data: {
@@ -51,7 +51,7 @@ export const PagesRoutes:RouterConfig = [
             icon: 'ion-edit',
             selected: false,
             expanded: false,
-            order: 100,
+            order: 100
           }
         },
         children: [
@@ -359,7 +359,7 @@ export const PagesRoutes:RouterConfig = [
             target: '_blank'
           }
         }
-      }
+      }*/
     ]
   }
 ];
