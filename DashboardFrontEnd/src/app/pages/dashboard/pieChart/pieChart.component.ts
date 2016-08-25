@@ -2,6 +2,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
 import {BaCard} from '../../../theme/components';
 import {PieChartService} from './pieChart.service';
+import {ALMService} from '../../../alm.service';
 
 import './pieChart.loader.ts';
 
@@ -9,18 +10,64 @@ import './pieChart.loader.ts';
   selector: 'pie-chart',
   encapsulation: ViewEncapsulation.None,
   directives: [BaCard],
-  providers: [PieChartService],
+  providers: [PieChartService, ALMService],
   styles: [require('./pieChart.scss')],
   template: require('./pieChart.html')
 })
 // TODO: move easypiechart to component
 export class PieChart {
 
-  public charts: Array<Object>;
+  public charts:Array<Object>;
   private _init = false;
+  private outputDefects:{};
 
-  constructor(private _pieChartService: PieChartService) {
+  constructor(private _pieChartService:PieChartService, private _almService:ALMService) {
+    this.defectsStats = [];
     this.charts = this._pieChartService.getData();
+    this._almService.getAllOpenDefects().subscribe(data => this.outputDefects = data,
+      err => console.log(err),
+      () => {
+
+        this.defectsStats.push({
+          description: 'New/Open Defects',
+          stats: this.outputDefects.length,
+        });
+
+        this._almService.getAllInProgressDefects().subscribe(data => this.outputDefects = data,
+          err => console.log(err),
+          () => {
+
+            this.defectsStats.push({
+              description: 'In Progress',
+              stats: this.outputDefects.length,
+            });
+
+            this._almService.getAllFixedDefects().subscribe(data => this.outputDefects = data,
+              err => console.log(err),
+              () => {
+
+                this.defectsStats.push({
+                  description: 'Fixed',
+                  stats: this.outputDefects.length,
+                });
+
+                this._almService.getAllClosedDefects().subscribe(data => this.outputDefects = data,
+                  err => console.log(err),
+                  () => {
+
+                    this.defectsStats.push({
+                      description: 'Closed',
+                      stats: this.outputDefects.length,
+                    });
+
+                    this.charts = this._pieChartService.getData(this.defectsStats);
+
+                  });
+              });
+
+          });
+
+      });
   }
 
   ngAfterViewInit() {
@@ -52,9 +99,11 @@ export class PieChart {
   }
 
   private _updatePieCharts() {
-    let getRandomArbitrary = (min, max) => { return Math.random() * (max - min) + min };
+    let getRandomArbitrary = (min, max) => {
+      return Math.random() * (max - min) + min
+    };
 
-    jQuery('.pie-charts .chart').each(function(index, chart) {
+    jQuery('.pie-charts .chart').each(function (index, chart) {
       jQuery(chart).data('easyPieChart').update(getRandomArbitrary(55, 90));
     });
   }

@@ -34,7 +34,7 @@ export const PagesRoutes:RouterConfig = [
         component: Dashboard,
         data: {
           menu: {
-            title: 'Dashboard',
+            title: 'QC Status',
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
@@ -42,7 +42,7 @@ export const PagesRoutes:RouterConfig = [
           }
         }
       },
-      /*{
+      {
         path: 'editors',
         component: Editors,
         data: {
@@ -359,7 +359,7 @@ export const PagesRoutes:RouterConfig = [
             target: '_blank'
           }
         }
-      }*/
+      }
     ]
   }
 ];
