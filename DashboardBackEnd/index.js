@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var config = require('./config/config.js');
 var chalk = require('chalk');
 require('./app/models/defect.server.model');
+require('./app/models/defectHistory.server.model');
 require('./app/models/user.server.model');
 
 // Bootstrap db connection

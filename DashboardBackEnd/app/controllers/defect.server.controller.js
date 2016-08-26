@@ -5,105 +5,78 @@
  */
 var mongoose = require('mongoose'),
     Defect = mongoose.model('Defect'),
-    Alm = require('./almClient.server.controller'),
     _ = require('lodash');
 
 /**
  * Create a defect
  */
-exports.create = function (req, res) {
-    var query = {id: req.id};
-
-    var isExist = Defect.count(query).exec();
-
-    if (!isExist || isExist == 0) {
-        var defect = new Defect(req);
-
-        defect.save(function (err) {
-            if (err) throw err;
-            console.log('defect saved successfully!');
-        });
-    }
-
-};
-
-/**
- * Show the current defect
- */
-exports.read = function (req, res) {
-    res.json(req.defect);
-};
-
-/**
- * Update a defect
- */
-exports.update = function (req, res) {
-    var defect = req.defect;
-
-    defect = _.extend(defect, req.body);
-
-    defect.save(function (err) {
+exports.create = function (req, callback) {
+    Defect.count({id: req.id}, function (err, count) {
         if (err) {
-            return res.status(400).send({
-                message: errorHandler.getErrorMessage(err)
+            callback(err);
+        }
+        if (count == 0) {
+            var defect = new Defect(req);
+            defect.save(function (err) {
+                if (err) {
+                    callback(err);
+                }
+                else {
+                    console.log('defect saved successfully!');
+                }
             });
-        } else {
-            res.json(defect);
+        }
+        else {
+            update(req, callback);
         }
     });
 };
 
-/**
- * Delete an defect
- */
-exports.delete = function (req, res) {
-    var defect = req.defect;
+exports.get = function (id, callback) {
+    Defect.findOne({id: id}, function (err, defect) {
+        callback(err, defect);
+    });
+};
 
-    defect.remove(function (err) {
+function update(record, callback) {
+    console.log("update defect id ",record.id);
+    Defect.update({id: record.id}, {
+        $set: {
+            id: record.id,
+            name: record.name,
+            severity: record.severity,
+            priority: record.priority,
+            status: record.status,
+            owner: record.owner,
+            detectedBy: record.detectedBy,
+            environment: record.environment,
+            defectType: record.defectType,
+            creationTime: record.creationTime,
+            lastModified: record.lastModified
+        }
+    }, function (err, result) {
+        console.log(result);
+        callback(err, result);
+    });
+};
+
+
+exports.list = function (callback) {
+    console.log("==== Load Defects ====");
+    var query = {};
+    Defect.find(query).sort({lastModified: -1}).lean().exec(function (err, defectList) {
         if (err) {
-            return res.status(400).send({
-                message: errorHandler.getErrorMessage(err)
-            });
+            console.error(err);
+            callback(err);
         } else {
-            res.json(defect);
+            console.log("Load Defects OK");
+            callback(null, defectList);
         }
     });
 };
 
-/**
- * List of Defects
- */
-exports.list = function (req, res) {
-    Defect.find().sort('-created').populate('user', 'displayName').exec(function (err, defects) {
-        if (err) {
-            return res.status(400).send({
-                message: errorHandler.getErrorMessage(err)
-            });
-        } else {
-            res.json(defects);
-        }
-    });
-};
-
-/**
- * Defect middleware
- */
-exports.defectByID = function (req, res, next, id) {
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(400).send({
-            message: 'Defect is invalid'
-        });
-    }
-
-    Defect.findById(id).populate('user', 'displayName').exec(function (err, defect) {
-        if (err) return next(err);
-        if (!defect) {
-            return res.status(404).send({
-                message: 'Defect not found'
-            });
-        }
-        req.defect = defect;
-        next();
+exports.getLatest = function (callback) {
+    Defect.findOne({}, {}, {sort: {lastModified: -1}}, function (err, defect) {
+        callback(err, defect);
     });
 };

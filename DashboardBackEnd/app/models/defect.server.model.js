@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
 
 var DefectSchema = new Schema({
     id: {
-        type: String
+        type: Number
     },
     name: {
         type: String
