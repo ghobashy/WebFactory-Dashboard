@@ -14,60 +14,17 @@ import './pieChart.loader.ts';
   styles: [require('./pieChart.scss')],
   template: require('./pieChart.html')
 })
-// TODO: move easypiechart to component
+
 export class PieChart {
 
   public charts:Array<Object>;
+  public defectsStats:Array<Object>;
   private _init = false;
   private outputDefects:{};
 
   constructor(private _pieChartService:PieChartService, private _almService:ALMService) {
-    this.defectsStats = [];
     this.charts = this._pieChartService.getData();
-    this._almService.getAllOpenDefects().subscribe(data => this.outputDefects = data,
-      err => console.log(err),
-      () => {
-
-        this.defectsStats.push({
-          description: 'New/Open Defects',
-          stats: this.outputDefects.length,
-        });
-
-        this._almService.getAllInProgressDefects().subscribe(data => this.outputDefects = data,
-          err => console.log(err),
-          () => {
-
-            this.defectsStats.push({
-              description: 'In Progress',
-              stats: this.outputDefects.length,
-            });
-
-            this._almService.getAllFixedDefects().subscribe(data => this.outputDefects = data,
-              err => console.log(err),
-              () => {
-
-                this.defectsStats.push({
-                  description: 'Fixed',
-                  stats: this.outputDefects.length,
-                });
-
-                this._almService.getAllClosedDefects().subscribe(data => this.outputDefects = data,
-                  err => console.log(err),
-                  () => {
-
-                    this.defectsStats.push({
-                      description: 'Closed',
-                      stats: this.outputDefects.length,
-                    });
-
-                    this.charts = this._pieChartService.getData(this.defectsStats);
-
-                  });
-              });
-
-          });
-
-      });
+    console.log(this.charts);
   }
 
   ngAfterViewInit() {

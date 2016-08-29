@@ -20,7 +20,7 @@ function Login() {
 };
 
 exports.updatedDatabase = function (req, res) {
-   updateDefects(res);
+    updateDefects(res);
 };
 
 function updateDefects(res) {
@@ -45,7 +45,8 @@ function updateDefects(res) {
                     })
                         .then(function (defects) {
                             console.log("got $s defects", defects.length);
-                            if(defect.length>0){
+                            if (defects.length > 0) {
+                                console.log("get defect history");
                                 getALMHistory(defects);
                             }
                             _.each(defects, function (obj, id) {
@@ -80,7 +81,7 @@ function updateDefects(res) {
     });
 }
 exports.getAllDefects = function (req, res) {
-    DefectController.list(function (err, defects) {
+    DefectController.list({}, function (err, defects) {
         if (err) {
             res.send(err);
         } else {
@@ -109,11 +110,6 @@ exports.getDefectHistory = function (req, res) {
             res.send(defectHistory);
         }
     });
-    /*var allDefects = DefectController.list(function (err, defectList) {
-     console.log(defectList.length);
-     getALMHistory(defectList);
-     res.send("done");
-     });*/
 };
 
 function getALMHistory(defectList) {
@@ -161,73 +157,42 @@ function getALMHistory(defectList) {
             console.log("Try again");
         });
 }
-/*
- exports.getDefectHistory = function (req, res) {
- var defectURL = config.appSettings.alm.EntityHistory.replace("{Entity Type}", "defect").replace("{Entity ID}", req.params.id);
- Login().then(
- function () {
- qcApi.get(defectURL)
- .then(function (defect) {
- console.log("got $s defects", defect.length);
- res.send(defect);
- }, function (err) {
- console.log("error occured: %s", err);
- res.send("error occured: %s", err);
- });
- }, function (err) {
- console.log("error occured: %s", err);
- res.send("error occured: %s", err);
- });
- };*/
 
 exports.getUsersDefects = function (req, res) {
+    var userList = req.params.users.split(',');
+    var conditionList = [];
+    _.each(userList, function (obj) {
+        conditionList.push(new RegExp(obj, "i"));
+    });
 
-
-    /*var defectsURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "defect");
-
-     Login().then(
-     function () {
-     console.log(req.params.users.split(',').join(' or '));
-     qcApi.get(defectsURL + "?query={ owner[= " + req.params.users.split(',').join(' or ') + "]}", {
-     pageSize: 'max',
-     fields: config.appSettings.fields
-     })
-     .then(function (defects) {
-     console.log("got $s defects", defects.length);
-     res.send(defects);
-     }, function (err) {
-     console.log("error occured: %s", err);
-     res.send("error occured: %s", err);
-     });
-     }, function (err) {
-     console.log("error occured: %s", err);
-     res.send("error occured: %s", err);
-     });*/
+    DefectController.list({
+        'owner': {$in: conditionList}
+    }, function (err, defect) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(defect);
+        }
+    });
 };
 
-
 exports.getStatusDefects = function (req, res) {
-    /*var defectsURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "defect");
+    var statusList = req.params.status.split(',');
+    var conditionList = [];
+    _.each(statusList, function (obj) {
+        console.log(new RegExp(obj, "i"));
+        conditionList.push(new RegExp(obj, "i"));
+    });
 
-     Login().then(
-     function () {
-     console.log(req.params.status.split(',').join(' or '));
-     console.log(config.appSettings.fields);
-     qcApi.get(defectsURL + "?query={ status[= " + req.params.status.split(',').join(' or ') + "]}", {
-     pageSize: 'max',
-     fields: config.appSettings.fields
-     })
-     .then(function (defects) {
-     console.log("got $s defects", defects.length);
-     res.send(defects);
-     }, function (err) {
-     console.log("error occured: %s", err);
-     res.send("error occured: %s", err);
-     });
-     }, function (err) {
-     console.log("error occured: %s", err);
-     res.send("error occured: %s", err);
-     });*/
+    DefectController.list({
+        'status': {$in: conditionList}
+    }, function (err, defect) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(defect);
+        }
+    });
 };
 
 exports.getAllUsers = function (req, res) {

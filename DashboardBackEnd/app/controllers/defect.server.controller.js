@@ -61,9 +61,8 @@ function update(record, callback) {
 };
 
 
-exports.list = function (callback) {
+exports.list = function (query,callback) {
     console.log("==== Load Defects ====");
-    var query = {};
     Defect.find(query).sort({lastModified: -1}).lean().exec(function (err, defectList) {
         if (err) {
             console.error(err);

@@ -23,7 +23,15 @@ exports.create = function (req, res) {
             });
         }
         else {
-            console.log('defect History already exist!');
+            update(req,function (err, result) {
+                if(err){
+                    console.log("Error saving history log: ",req.Id);
+                }
+                else{
+                    console.log("History updated  "+ req.Id);
+                }
+            });
+
         }
     });
 };
@@ -36,7 +44,7 @@ exports.get = function (id, callback) {
 };
 
 
-exports.update = function (record, callback) {
+function update(record, callback) {
     DefectHistory.update({_id: record._id}, {
         $set: {
             Id: record.Id,
