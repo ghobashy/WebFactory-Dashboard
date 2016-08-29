@@ -14,7 +14,8 @@
             GET_ALL_USERS: API_BASE_URL + '/alm/users/all',
             GET_DEFECT_HISTORY: API_BASE_URL + '/alm/history/%ID%',
             GET_USERS_DEFECTS: API_BASE_URL + '/alm/users/%USERS%',
-            GET_STATUS_DEFECTS: API_BASE_URL + '/alm/status/%STATUS%'
+            GET_STATUS_DEFECTS: API_BASE_URL + '/alm/status/%STATUS%',
+            GET_PERIOD_HISTORY: API_BASE_URL+'/alm/history/%STARTDATE%/%ENDDATE%'
         }
     };
     alm.value('config', config);

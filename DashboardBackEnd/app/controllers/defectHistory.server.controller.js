@@ -59,9 +59,9 @@ function update(record, callback) {
     });
 };
 
-exports.list = function (callback) {
+exports.list = function (query,callback) {
     console.log("==== Load Defects ====");
-    var query = {};
+    
     DefectHistory.find(query).sort({time: 1}).lean().exec(function (err, defectHistoryList) {
         if (err) {
             console.error(err);
