@@ -1,25 +1,69 @@
-
 <dashboard-pie-chart></dashboard-pie-chart>
 
 <div class="row">
-  <div class="col-lg-6 col-md-12 col-sm-12"
-       ba-panel
-       ba-panel-title="Open defects categories"
-       ba-panel-class="medium-panel traffic-panel">
-    <traffic-chart></traffic-chart>
-  </div>
-  <div class="col-lg-6 col-md-12 col-sm-12">
-    <div ba-panel ba-panel-title="Line" ba-panel-class="with-scroll ">
-      <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
-              chart-legend="false" chart-series="series" chart-click="changeData"></canvas>
+    <div class="col-lg-6 col-md-12 col-sm-12"
+         ba-panel
+         ba-panel-title="Open defects categories"
+         ba-panel-class="medium-panel traffic-panel">
+        <traffic-chart></traffic-chart>
     </div>
-  </div>
-  <!--<div class="col-lg-6 col-md-12 col-sm-12"
-       ba-panel
-       ba-panel-title="Users by Country"
-       ba-panel-class="medium-panel">
-    <dashboard-map></dashboard-map>
-  </div>-->
+    <div class="col-lg-6 col-md-12 col-sm-12">
+
+        <div ba-panel ba-panel-title="Defect Status Progress" ba-panel-class="with-scroll ">
+            <div class="form-group col-lg-4 col-md-7 col-sm-7">
+
+            </div>
+            <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
+                    chart-legend="true" chart-series="series" chart-click="changeData" colours="[{
+    fillColor: 'rgba(32,158,145,1)',
+    strokeColor: 'rgba(32,158,145,1)',
+    highlightFill: 'rgba(32,158,145,1)',
+    highlightStroke: 'rgba(32,158,145,1)'
+    },
+	{
+    fillColor: 'rgba(232,86,86,1)',
+    strokeColor: 'rgba(232,86,86,1)',
+    highlightFill: 'rgba(232,86,86,1)',
+    highlightStroke: 'rgba(232,86,86,1)'
+    },
+	{
+    fillColor: 'rgba(223,184,28,1)',
+    strokeColor: 'rgba(223,184,28,1)',
+    highlightFill: 'rgba(223,184,28,1)',
+    highlightStroke: 'rgba(223,184,28,1)'
+    },
+	{
+    fillColor: 'rgba(144,185,0,1)',
+    strokeColor: 'rgba(144,185,0,1)',
+    highlightFill: 'rgba(144,185,0,1)',
+    highlightStroke: 'rgba(144,185,0,1)'
+    },
+	{
+    fillColor: 'rgba(45,172,209,1)',
+    strokeColor: 'rgba(45,172,209,1)',
+    highlightFill: 'rgba(45,172,209,1)',
+    highlightStroke: 'rgba(45,172,209,1)'
+    },
+	{
+    fillColor: 'rgba(47, 132, 71, 0.8)',
+    strokeColor: 'rgba(47, 132, 71, 0.8)',
+    highlightFill: 'rgba(47, 132, 71, 0.8)',
+    highlightStroke: 'rgba(47, 132, 71, 0.8)'
+    },
+	{
+    fillColor: 'rgba(27,134,123,1)',
+    strokeColor: 'rgba(27,134,123,1)',
+    highlightFill: 'rgba(27,134,123,1)',
+    highlightStroke: 'rgba(27,134,123,1)'
+    }]"></canvas>
+        </div>
+    </div>
+    <!--<div class="col-lg-6 col-md-12 col-sm-12"
+         ba-panel
+         ba-panel-title="Users by Country"
+         ba-panel-class="medium-panel">
+      <dashboard-map></dashboard-map>
+    </div>-->
 </div>
 
 <!--
