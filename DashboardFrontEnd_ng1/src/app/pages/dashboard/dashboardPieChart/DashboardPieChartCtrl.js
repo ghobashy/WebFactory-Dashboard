@@ -69,7 +69,7 @@
 
             totalDefectsNumber = defects.length;
             var fixedCount = defects.filter(function (obj) {
-                return ["fixed", "ready to restest"].indexOf(obj["status"].toLowerCase()) > -1;
+                return ["fixed"].indexOf(obj["status"].toLowerCase()) > -1;
             });
             var noticedCount = defects.filter(function (obj) {
                 return obj["status"].toLowerCase() == "noticed";
@@ -94,20 +94,33 @@
                 return ["retest blocked"].indexOf(obj["status"].toLowerCase()) > -1;
             });
 
+            var readyToRetestCount = defects.filter(function (obj) {
+                return ["ready to retest"].indexOf(obj["status"].toLowerCase()) > -1;
+            });
+
             pieChartValues = [fixedCount.length,
+                readyToRetestCount.length,
                 noticedCount.length,
                 openCount.length,
                 closedCount.length,
                 rejectedCount.length,
                 reOpenCount.length,
-                retestBlockedCount.length];
+                retestBlockedCount.length,
+
+            ];
 
             $scope.charts = [{
                 color: pieColor,
                 description: 'Fixed',
                 stats: numberWithCommas(fixedCount.length),
                 icon: 'bug'
-            }, {
+            },
+                {
+                    color: pieColor,
+                    description: 'Ready to Retest',
+                    stats: numberWithCommas(readyToRetestCount.length),
+                    icon: 'bug'
+                }, {
                 color: pieColor,
                 description: 'Noticed',
                 stats: numberWithCommas(noticedCount.length),
@@ -123,24 +136,24 @@
                 stats: numberWithCommas(closedCount.length),
                 icon: 'bug'
             },
-            {
-                color: pieColor,
-                description: 'Rejected',
-                stats: numberWithCommas(rejectedCount.length),
-                icon: 'bug'
-            },
-            {
-                color: pieColor,
-                description: 'Re-Open',
-                stats: numberWithCommas(reOpenCount.length),
-                icon: 'bug'
-            },
-            {
-                color: pieColor,
-                description: 'Retest Blocked',
-                stats: numberWithCommas(retestBlockedCount.length),
-                icon: 'bug'
-            }
+                {
+                    color: pieColor,
+                    description: 'Rejected',
+                    stats: numberWithCommas(rejectedCount.length),
+                    icon: 'bug'
+                },
+                {
+                    color: pieColor,
+                    description: 'Re-Open',
+                    stats: numberWithCommas(reOpenCount.length),
+                    icon: 'bug'
+                },
+                {
+                    color: pieColor,
+                    description: 'Retest Blocked',
+                    stats: numberWithCommas(retestBlockedCount.length),
+                    icon: 'bug'
+                }
             ];
             $timeout(function () {
                 loadPieCharts();
