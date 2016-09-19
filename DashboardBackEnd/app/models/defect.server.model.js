@@ -23,10 +23,13 @@ var DefectSchema = new Schema({
     detectedBy: {
         type: String
     },
-    environment:{
+    pageName: {
         type: String
     },
-    defectType:{
+    environment: {
+        type: String
+    },
+    defectType: {
         type: String
     },
     creationTime: {
@@ -38,4 +41,3 @@ var DefectSchema = new Schema({
 });
 
 mongoose.model('Defect', DefectSchema);
-

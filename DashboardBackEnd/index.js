@@ -1,8 +1,11 @@
+'use strict';
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
 var config = require('./config/config.js');
 var chalk = require('chalk');
+var _ = require('lodash');
 require('./app/models/defect.server.model');
 require('./app/models/defectHistory.server.model');
 require('./app/models/user.server.model');
@@ -19,7 +22,7 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Content-Type");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
@@ -27,6 +30,6 @@ app.use(function (req, res, next) {
 });
 
 var routes = require("./routes/routes.js")(app);
-var server = app.listen(3000, function () {
+var server = app.listen(3000, function() {
     console.log("Listening on port %s...", server.address().port);
 });

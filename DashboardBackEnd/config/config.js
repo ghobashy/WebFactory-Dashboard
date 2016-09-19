@@ -23,7 +23,7 @@ exports.appSettings = {
         IsAuthenticated: "/qcbin/rest/is-authenticated",
         SessionAddress: "/qcbin/rest/site-session"
     },
-   fields: ["priority",
+    fields: ["priority",
         "id",
         "status",
         "owner",
@@ -33,5 +33,7 @@ exports.appSettings = {
         "severity",
         "detected-by",
         "user-05",
-        "user-04"]
+        "user-04",
+        "user-13"
+    ]
 };
