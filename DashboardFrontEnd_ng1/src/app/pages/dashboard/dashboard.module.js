@@ -10,7 +10,7 @@
         .controller('DashboardCtrl', ['$scope', '$interval', 'almService', DashboardCtrl]);
 
     function DashboardCtrl($scope, $interval, almService) {
-       /* var stop = $interval(function () {
+        var stop = $interval(function () {
             console.log("Run Database update", new Date());
             almService.updateDatabase().then(function (result) {
                 if (result > 0) {
@@ -18,7 +18,7 @@
                     almService.notify();
                 }
             });
-        }, 120000);*/
+        }, 600000);
         
         almService.subscribe($scope, function () {
             console.log("Load line chart");
