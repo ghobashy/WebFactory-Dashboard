@@ -4,6 +4,7 @@ var config = require('../../config/config.js'),
     _ = require('lodash'),
     https = require('https'),
     http = require('http'),
+    chalk = require('chalk'),
     qcApi = require("../../app/controllers/qcApi.js").create(),
     DefectController = require('../../app/controllers/defect.server.controller'),
     DefectHistoryController = require('../../app/controllers/defectHistory.server.controller'),
@@ -134,87 +135,24 @@ function updateDefects(res) {
             Login().then(
                 function() {
                     if (defect) {
-                        var lastModDate = defect.lastModified.getFullYear() +
+                        var lastModDateTime = defect.lastModified.getFullYear() +
                             "-" + (parseInt(defect.lastModified.getMonth()) + 1) +
                             "-" + defect.lastModified.getDate() + " " +
                             defect.lastModified.getHours() + ":" +
                             defect.lastModified.getMinutes() + ":" +
                             defect.lastModified.getSeconds();
 
-                        var defectsURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "defect");
-                        qcApi.get(defectsURL + "?query={ last-modified[>'" + lastModDate + "']}", {
-                                pageSize: 'max',
-                                fields: config.appSettings.fields
-                            })
-                            .then(function(defects) {
-                                console.log("got $s defects", defects.length);
-                                if (defects.length > 0) {
-                                    console.log("get defect history");
-                                    getALMHistory(defects);
-                                }
-                                _.each(defects, function(obj, id) {
-                                    DefectController.create({
-                                        id: parseInt(obj.id),
-                                        name: obj.name,
-                                        severity: obj.severity,
-                                        priority: obj.priority,
-                                        status: obj.status,
-                                        owner: obj.owner,
-                                        detectedBy: obj["detected-by"],
-                                        pageName: obj["user-13"],
-                                        environment: obj["user-05"],
-                                        defectType: obj["user-04"],
-                                        creationTime: obj["creation-time"],
-                                        lastModified: obj["last-modified"]
-                                    }, function(err) {
-                                        if (err) {
-                                            console.log(JSON.stringify(err));
-                                        }
-                                    });
-                                });
-                                res.send(defects);
-                            }, function(err) {
-                                console.log("error occured: %s", JSON.stringify(err));
-                                res.send("error occured: %s", JSON.stringify(err));
-                            });
+                        var lastModDate = defect.lastModified.getFullYear() +
+                            "-" + (parseInt(defect.lastModified.getMonth()) + 1) +
+                            "-" + defect.lastModified.getDate();
+
+                        var defectsURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "defect") + "?query={ last-modified[>'" + lastModDateTime + "']}";
+                        getDefects(defectsURL);
                     } else {
                         var defectsURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "defect");
-                        qcApi.get(defectsURL, {
-                                pageSize: 'max',
-                                fields: config.appSettings.fields
-                            })
-                            .then(function(defects) {
-                                console.log("got $s defects", defects.length);
-                                if (defects.length > 0) {
-                                    console.log("get defect history");
-                                    getALMHistory(defects);
-                                }
-                                _.each(defects, function(obj, id) {
-                                    DefectController.create({
-                                        id: parseInt(obj.id),
-                                        name: obj.name,
-                                        severity: obj.severity,
-                                        priority: obj.priority,
-                                        status: obj.status,
-                                        owner: obj.owner,
-                                        detectedBy: obj["detected-by"],
-                                        pageName: obj["user-13"],
-                                        environment: obj["user-05"],
-                                        defectType: obj["user-04"],
-                                        creationTime: obj["creation-time"],
-                                        lastModified: obj["last-modified"]
-                                    }, function(err) {
-                                        if (err) {
-                                            console.log(JSON.stringify(err));
-                                        }
-                                    });
-                                });
-                                res.send(defects);
-                            }, function(err) {
-                                console.log("error occured: %s", JSON.stringify(err));
-                                res.send("error occured: %s", JSON.stringify(err));
-                            });
+                        getDefects(defectsURL);
                     }
+                    res.send("In Progress");
                 },
                 function(err) {
                     console.log("error occured: %s", JSON.stringify(err));
@@ -224,49 +162,84 @@ function updateDefects(res) {
     });
 }
 
-function getALMHistory(defectList) {
+function getALMHistory(lastModDate, defectRange = ">0") {
 
-    console.log("Get History for defect ", defectList[0].id);
-    var defectURL = config.appSettings.alm.EntityHistory.replace("{Entity Type}", "defect").replace("{Entity ID}", defectList[0].id);
+    var defectURL = config.appSettings.alm.EntityCollection.replace("{Entity Type}", "audit") + "?query={parent-type[defect];parent-id[" + defectRange + "]%TIME%}";
+    if (lastModDate) {
+        defectURL = defectURL.replace("%TIME%", ";Time[>" + lastModDate + "]");
+    } else {
+        defectURL = defectURL.replace("%TIME%", "");
+    }
+    console.log("Get Defect History");
     Login().then(
         function() {
-            qcApi.get(defectURL)
+            qcApi.get(defectURL, {
+                    pageSize: 'max'
+                })
                 .then(function(defect) {
-                    console.log("got  defect history for defect " + defectList[0].id);
+                    console.log("got  defect history ", defect.Audits.Audit.length);
                     _.each(defect.Audits.Audit, function(obj, id) {
-                        var history = {
-                            Id: obj.Id[0],
-                            defectId: obj.ParentId[0],
-                            username: obj.User[0],
-                            time: obj.Time[0],
-                            oldValue: '',
-                            newValue: ''
-                        };
-
                         if (obj.Properties.length > 0 && obj.Properties[0].Property) {
                             _.each(obj.Properties[0].Property, function(prop, propId) {
-                                if (prop.$.Name == 'status') {
-                                    history.oldValue = prop.OldValue[0];
-                                    history.newValue = prop.NewValue[0];
-                                    DefectHistoryController.create(history);
-                                }
+                                var history = {
+                                    Id: obj.Id[0],
+                                    defectId: obj.ParentId[0],
+                                    username: obj.User[0],
+                                    time: obj.Time[0],
+                                    oldValue: prop.OldValue[0],
+                                    newValue: prop.NewValue[0],
+                                    property: prop.$.Name
+                                };
+                                DefectHistoryController.create(history);
                             });
                         }
 
                     });
-                    if (defectList.length > 1) {
-                        defectList.shift();
-                        getALMHistory(defectList);
-                    }
                 }, function(err) {
-                    console.log("error occured: %s", err);
-                    console.log("Try again");
-                    defectList.shift();
-                    getALMHistory(defectList);
+                    console.log("error occured: %s", JSON.stringify(err));
                 });
         },
         function(err) {
             console.log("error occured: %s", JSON.stringify(err));
-            console.log("Try again");
+        });
+}
+
+function getDefects(defectsURL) {
+    qcApi.get(defectsURL, {
+            pageSize: 'max',
+            fields: config.appSettings.fields
+        })
+        .then(function(defects) {
+            console.log("got $s defects", defects.length);
+            var defectList = [];
+            _.each(defects, function(obj, id) {
+                DefectController.create({
+                    id: parseInt(obj.id),
+                    name: obj.name,
+                    severity: obj.severity,
+                    priority: obj.priority,
+                    status: obj.status,
+                    owner: obj.owner,
+                    detectedBy: obj["detected-by"],
+                    pageName: obj["user-13"],
+                    environment: obj["user-05"],
+                    defectType: obj["user-04"],
+                    creationTime: obj["creation-time"],
+                    lastModified: obj["last-modified"]
+                }, function(err) {
+                    if (err) {
+                        console.log(JSON.stringify(err));
+                    }
+                });
+
+                defectList.push(obj.id);
+                if (defectList.length == 200 || id == defects.length - 1) {
+                    var defectRange = defectList.join(" Or ");
+                    getALMHistory(null, defectRange);
+                    defectList = [];
+                }
+            });
+        }, function(err) {
+            console.log("error occured: %s", JSON.stringify(err));
         });
 }

@@ -2,7 +2,7 @@
  * @author v.lugovsky
  * created on 16.12.2015
  */
-(function () {
+(function() {
     'use strict';
 
     angular.module('BlurAdmin.pages.dashboard', [])
@@ -10,30 +10,31 @@
         .controller('DashboardCtrl', ['$scope', '$interval', 'almService', DashboardCtrl]);
 
     function DashboardCtrl($scope, $interval, almService) {
-        var stop = $interval(function () {
+        var stop = $interval(function() {
             console.log("Run Database update", new Date());
-            almService.updateDatabase().then(function (result) {
+            almService.updateDatabase().then(function(result) {
                 if (result > 0) {
                     console.log("found updates");
                     almService.notify();
                 }
             });
         }, 600000);
-        
-        almService.subscribe($scope, function () {
+
+        almService.subscribe($scope, function() {
             console.log("Load line chart");
             LoadLineChart();
         });
         LoadLineChart();
 
         $scope.series = ['Fixed', 'Ready to Retest', 'Open', 'New', 'Closed', 'Rejected', 'ReOpened'];
-        
+
         function getHistoryCount(status, periodHistory, dates) {
             var historyList = [];
             for (var i = 0; i < dates.length; i++) {
 
-                var history = periodHistory.filter(function (obj) {
-                    return obj["newValue"].toLowerCase() == status &&
+                var history = periodHistory.filter(function(obj) {
+                    return obj["property"].toLowerCase() == "status" &&
+                        obj["newValue"].toLowerCase() == status &&
                         new Date(obj["time"]) >= dates[i] &&
                         new Date(obj["time"]) < new Date(dates[i].getFullYear(), dates[i].getMonth(), (dates[i].getDate() + 1));
                 });
@@ -93,7 +94,7 @@
                 },
                 resolve: {
                     data: ['almService',
-                        function (almService) {
+                        function(almService) {
                             var curr = new Date;
                             var first = curr.getDate() - 6;
                             var last = curr + 1;
@@ -105,7 +106,8 @@
                             almService.getAllDefects();
                             almService.getPeriodProgress(firstDayString, lastdayString);
                             return;
-                        }]
+                        }
+                    ]
                 }
             });
     }

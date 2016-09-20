@@ -11,6 +11,9 @@ var DefectHistorySchema = new Schema({
     username: {
         type: String
     },
+    property: {
+        type: String
+    },
     time: {
         type: Date
     },
@@ -23,5 +26,3 @@ var DefectHistorySchema = new Schema({
 });
 
 mongoose.model('DefectHistory', DefectHistorySchema);
-
-
