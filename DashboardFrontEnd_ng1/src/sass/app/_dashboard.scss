@@ -1,23 +1,29 @@
 @media screen and (min-width: 1620px) {
-  .row.shift-up {
-    > div {
-      margin-top: -573px;
+    .row.shift-up {
+        >div {
+            margin-top: -573px;
+        }
     }
-  }
 }
 
 @media screen and (max-width: 1620px) {
- .panel.feed-panel.large-panel {
-   height: 824px;
- }
+    .panel.feed-panel.large-panel {
+        height: 824px;
+    }
 }
 
 .user-stats-panel {
-  .panel-title {
-    padding: 0 0 15px;
-  }
+    .panel-title {
+        padding: 0 0 15px;
+    }
 }
 
-.blurCalendar{
-  height: 475px;
+.blurCalendar {
+    height: 475px;
+}
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
 }

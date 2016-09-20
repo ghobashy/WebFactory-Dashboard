@@ -10,6 +10,8 @@
         .controller('DashboardCtrl', ['$scope', '$interval', 'almService', DashboardCtrl]);
 
     function DashboardCtrl($scope, $interval, almService) {
+
+
         var stop = $interval(function() {
             console.log("Run Database update", new Date());
             almService.updateDatabase().then(function(result) {
