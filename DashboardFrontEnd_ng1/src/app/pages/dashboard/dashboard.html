@@ -1,20 +1,55 @@
 <dashboard-pie-chart></dashboard-pie-chart>
 
 <div class="row">
-    <div class="col-lg-6 col-md-12 col-sm-12"
-         ba-panel
-         ba-panel-title="Open defects categories"
-         ba-panel-class="medium-panel traffic-panel">
+    <div class="col-lg-6 col-md-12 col-sm-12" ba-panel ba-panel-title="Open defects by severity" ba-panel-class="medium-panel traffic-panel">
         <traffic-chart></traffic-chart>
     </div>
     <div class="col-lg-6 col-md-12 col-sm-12">
 
         <div ba-panel ba-panel-title="Defect Status Progress" ba-panel-class="with-scroll ">
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
-
+                <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="fixedCheck" ng-click="LoadLineChart()" ng-model="showFixed">
+        <span>Fixed</span>
+      </label>
             </div>
-            <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels"
-                    chart-legend="true" chart-series="series" chart-click="changeData" colours="[{
+            <div class="form-group col-lg-4 col-md-7 col-sm-7">
+                <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="readyToRetestCheck" ng-click="LoadLineChart()"  ng-model="showReadyToRetest">
+        <span>Ready to Retest</span>
+      </label>
+            </div>
+            <div class="form-group col-lg-4 col-md-7 col-sm-7">
+                <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="openCheck" ng-click="LoadLineChart()"  ng-model="showOpen">
+        <span>Open</span>
+      </label>
+            </div>
+            <div class="form-group col-lg-4 col-md-7 col-sm-7">
+                <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="newCheck"  ng-click="LoadLineChart()" ng-model="showNew">
+        <span>New</span>
+      </label>
+            </div>
+            <div class="form-group col-lg-4 col-md-7 col-sm-7">
+                <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="closedCheck"  ng-click="LoadLineChart()" ng-model="showClosed">
+        <span>Closed</span>
+      </label>
+            </div>
+            <div class="form-group col-lg-4 col-md-7 col-sm-7">
+                <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="rejectedCheck" ng-click="LoadLineChart()"  ng-model="showRejected">
+        <span>Rejected</span>
+      </label>
+            </div>
+            <div class="form-group col-lg-4 col-md-7 col-sm-7">
+                <label class="checkbox-inline custom-checkbox nowrap">
+        <input type="checkbox" id="reOpenCheck" ng-click="LoadLineChart()" ng-model="showReOpen">
+        <span>Re-Open</span>
+      </label>
+            </div>
+            <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-click="changeData" colours="[{
                                                                                                 fillColor: 'rgba(32,158,145,1)',
                                                                                                 strokeColor: 'rgba(32,158,145,1)',
                                                                                                 highlightFill: 'rgba(32,158,145,1)',

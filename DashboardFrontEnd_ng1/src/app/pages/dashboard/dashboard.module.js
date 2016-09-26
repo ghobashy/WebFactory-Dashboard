@@ -10,7 +10,13 @@
         .controller('DashboardCtrl', ['$scope', '$interval', 'almService', DashboardCtrl]);
 
     function DashboardCtrl($scope, $interval, almService) {
-
+        $scope.showFixed = true;
+        $scope.showReadyToRetest = true;
+        $scope.showOpen = true;
+        $scope.showNew = true;
+        $scope.showClosed = true;
+        $scope.showRejected = true;
+        $scope.showReOpen = true;
 
         var stop = $interval(function() {
             console.log("Run Database update", new Date());
@@ -22,30 +28,7 @@
             });
         }, 600000);
 
-        almService.subscribe($scope, function() {
-            console.log("Load line chart");
-            LoadLineChart();
-        });
-        LoadLineChart();
-
-        $scope.series = ['Fixed', 'Ready to Retest', 'Open', 'New', 'Closed', 'Rejected', 'ReOpened'];
-
-        function getHistoryCount(status, periodHistory, dates) {
-            var historyList = [];
-            for (var i = 0; i < dates.length; i++) {
-
-                var history = periodHistory.filter(function(obj) {
-                    return obj["property"].toLowerCase() == "status" &&
-                        obj["newValue"].toLowerCase() == status &&
-                        new Date(obj["time"]) >= dates[i] &&
-                        new Date(obj["time"]) < new Date(dates[i].getFullYear(), dates[i].getMonth(), (dates[i].getDate() + 1));
-                });
-                historyList.push(history.length);
-            }
-            return historyList;
-        }
-
-        function LoadLineChart() {
+        $scope.LoadLineChart = function() {
             var periodHistory = almService.loadDefectHistory();
 
             var first = new Date;
@@ -69,7 +52,29 @@
                 first = new Date(first.setDate(first.getDate() + 1));
             }
 
-            $scope.data = [
+            $scope.data = [];
+            if ($scope.showFixed) {
+                $scope.data.push(getHistoryCount('fixed', periodHistory, $scope.periodDates));
+            }
+            if ($scope.showReadyToRetest) {
+                $scope.data.push(getHistoryCount('ready to retest', periodHistory, $scope.periodDates));
+            }
+            if ($scope.showOpen) {
+                $scope.data.push(getHistoryCount('open', periodHistory, $scope.periodDates));
+            }
+            if ($scope.showNew) {
+                $scope.data.push(getHistoryCount('new', periodHistory, $scope.periodDates));
+            }
+            if ($scope.showClosed) {
+                $scope.data.push(getHistoryCount('closed', periodHistory, $scope.periodDates));
+            }
+            if ($scope.showRejected) {
+                $scope.data.push(getHistoryCount('rejected', periodHistory, $scope.periodDates));
+            }
+            if ($scope.showReOpen) {
+                $scope.data.push(getHistoryCount('reopen', periodHistory, $scope.periodDates));
+            }
+            /*
                 getHistoryCount('fixed', periodHistory, $scope.periodDates),
                 getHistoryCount('ready to retest', periodHistory, $scope.periodDates),
                 getHistoryCount('open', periodHistory, $scope.periodDates),
@@ -77,8 +82,33 @@
                 getHistoryCount('closed', periodHistory, $scope.periodDates),
                 getHistoryCount('rejected', periodHistory, $scope.periodDates),
                 getHistoryCount('reopen', periodHistory, $scope.periodDates)
-            ];
+             */
+        };
+
+        almService.subscribe($scope, function() {
+            console.log("Load line chart");
+            $scope.LoadLineChart();
+        });
+        $scope.LoadLineChart();
+
+        $scope.series = ['Fixed', 'Ready to Retest', 'Open', 'New', 'Closed', 'Rejected', 'ReOpened'];
+
+        function getHistoryCount(status, periodHistory, dates) {
+            var historyList = [];
+            for (var i = 0; i < dates.length; i++) {
+
+                var history = periodHistory.filter(function(obj) {
+                    return obj["property"].toLowerCase() == "status" &&
+                        obj["newValue"].toLowerCase() == status &&
+                        new Date(obj["time"]) >= dates[i] &&
+                        new Date(obj["time"]) < new Date(dates[i].getFullYear(), dates[i].getMonth(), (dates[i].getDate() + 1));
+                });
+                historyList.push(history.length);
+            }
+            return historyList;
         }
+
+
     }
 
 

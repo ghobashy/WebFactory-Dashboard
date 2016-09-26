@@ -25,7 +25,7 @@
                         <th st-sort="defectType">Defect Type</th>
                     </tr>
                     <tr>
-                        <th></th>
+                        <th><input st-search="id" placeholder="Search Id" class="input-sm form-control search-input" type="search" /></th>
                         <th><input st-search="name" placeholder="Search Title" class="input-sm form-control search-input" type="search" /></th>
                         <th><input st-search="owner" placeholder="Search Assigned to" class="input-sm form-control search-input" type="search" /></th>
                         <th><input st-search="severity" placeholder="Search Severity" class="input-sm form-control search-input" type="search" /></th>
@@ -37,7 +37,7 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="item in defectList">
-                        <td class="table-id">{{item.id}}</td>
+                        <td class="table-id"><a target="_blank" href="https://alm.vodafone.com/qcbin/ui/?p=DIGITAL/LT_DE_OnePOS#/defects/{{item.id}}/comments">{{item.id}}<a></td>
                         <td>{{item.name}}</td>
                         <td>{{item.owner}}</td>
                         <td>{{item.severity}}</td>

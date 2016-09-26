@@ -159,7 +159,7 @@
                     icon: 'bug'
                 },
                 {
-                    name: "reopen",
+                    name: "reOpen",
                     color: pieColor,
                     description: 'Re-Open',
                     stats: numberWithCommas(reOpenCount.length),
@@ -180,6 +180,8 @@
         }
 
         $scope.open = function(status) {
+            $scope.modalTitle = "";
+            $scope.defectList = [];
             switch (status) {
                 case "fixed":
                     $scope.modalTitle = "Fixed Defects";
@@ -206,7 +208,7 @@
                     $scope.defectList = rejectedCount;
                     break;
                 case "reOpen":
-                    $scope.modalTitle = "ReOpen Defects";
+                    $scope.modalTitle = "Re-Open Defects";
                     $scope.defectList = reOpenCount;
                     break;
                 case "retestBlocked":
