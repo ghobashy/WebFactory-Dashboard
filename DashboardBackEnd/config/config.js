@@ -23,6 +23,12 @@ exports.appSettings = {
         IsAuthenticated: "/qcbin/rest/is-authenticated",
         SessionAddress: "/qcbin/rest/site-session"
     },
+    jira: {
+        /*var jira = new JiraApi('https', config.host, config.port, config.user, config.password, '2.0.alpha1'); */
+        host: "jira.sp.vodafone.com",
+        port: 80,
+
+    },
     fields: ["priority",
         "id",
         "status",

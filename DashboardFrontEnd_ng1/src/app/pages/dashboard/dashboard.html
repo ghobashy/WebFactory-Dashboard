@@ -9,43 +9,43 @@
         <div ba-panel ba-panel-title="Defect Status Progress" ba-panel-class="with-scroll ">
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
                 <label class="checkbox-inline custom-checkbox nowrap">
-        <input type="checkbox" id="fixedCheck" ng-click="LoadLineChart()" ng-model="showFixed">
+        <input type="checkbox" id="fixedCheck"  ng-click="LoadLineChart()" ng-model="lineChartFilter.showFixed">
         <span>Fixed</span>
       </label>
             </div>
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
                 <label class="checkbox-inline custom-checkbox nowrap">
-        <input type="checkbox" id="readyToRetestCheck" ng-click="LoadLineChart()"  ng-model="showReadyToRetest">
+        <input type="checkbox" id="readyToRetestCheck" ng-click="LoadLineChart()"  ng-model="lineChartFilter.showReadyToRetest">
         <span>Ready to Retest</span>
       </label>
             </div>
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
                 <label class="checkbox-inline custom-checkbox nowrap">
-        <input type="checkbox" id="openCheck" ng-click="LoadLineChart()"  ng-model="showOpen">
+        <input type="checkbox" id="openCheck" ng-click="LoadLineChart()"  ng-model="lineChartFilter.showOpen">
         <span>Open</span>
       </label>
             </div>
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
                 <label class="checkbox-inline custom-checkbox nowrap">
-        <input type="checkbox" id="newCheck"  ng-click="LoadLineChart()" ng-model="showNew">
+        <input type="checkbox" id="newCheck"  ng-click="LoadLineChart()" ng-model="lineChartFilter.showNew">
         <span>New</span>
       </label>
             </div>
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
                 <label class="checkbox-inline custom-checkbox nowrap">
-        <input type="checkbox" id="closedCheck"  ng-click="LoadLineChart()" ng-model="showClosed">
+        <input type="checkbox" id="closedCheck"  ng-click="LoadLineChart()" ng-model="lineChartFilter.showClosed">
         <span>Closed</span>
       </label>
             </div>
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
                 <label class="checkbox-inline custom-checkbox nowrap">
-        <input type="checkbox" id="rejectedCheck" ng-click="LoadLineChart()"  ng-model="showRejected">
+        <input type="checkbox" id="rejectedCheck" ng-click="LoadLineChart()"  ng-model="lineChartFilter.showRejected">
         <span>Rejected</span>
       </label>
             </div>
             <div class="form-group col-lg-4 col-md-7 col-sm-7">
                 <label class="checkbox-inline custom-checkbox nowrap">
-        <input type="checkbox" id="reOpenCheck" ng-click="LoadLineChart()" ng-model="showReOpen">
+        <input type="checkbox" id="reOpenCheck" ng-click="LoadLineChart()" ng-model="lineChartFilter.showReOpen">
         <span>Re-Open</span>
       </label>
             </div>

@@ -10,13 +10,16 @@
         .controller('DashboardCtrl', ['$scope', '$interval', 'almService', DashboardCtrl]);
 
     function DashboardCtrl($scope, $interval, almService) {
-        $scope.showFixed = true;
-        $scope.showReadyToRetest = true;
-        $scope.showOpen = true;
-        $scope.showNew = true;
-        $scope.showClosed = true;
-        $scope.showRejected = true;
-        $scope.showReOpen = true;
+        $scope.lineChartFilter = {
+            showFixed: true,
+            showReadyToRetest: true,
+            showOpen: true,
+            showNew: true,
+            showClosed: true,
+            showRejected: true,
+            showReOpen: true
+        };
+        $scope.series = [];
 
         var stop = $interval(function() {
             console.log("Run Database update", new Date());
@@ -53,36 +56,35 @@
             }
 
             $scope.data = [];
-            if ($scope.showFixed) {
+            $scope.series = [];
+            if ($scope.lineChartFilter.showFixed) {
+                $scope.series.push("Fixed");
                 $scope.data.push(getHistoryCount('fixed', periodHistory, $scope.periodDates));
             }
-            if ($scope.showReadyToRetest) {
+            if ($scope.lineChartFilter.showReadyToRetest) {
+                $scope.series.push("Ready to Retest");
                 $scope.data.push(getHistoryCount('ready to retest', periodHistory, $scope.periodDates));
             }
-            if ($scope.showOpen) {
+            if ($scope.lineChartFilter.showOpen) {
+                $scope.series.push("Open");
                 $scope.data.push(getHistoryCount('open', periodHistory, $scope.periodDates));
             }
-            if ($scope.showNew) {
+            if ($scope.lineChartFilter.showNew) {
+                $scope.series.push("New");
                 $scope.data.push(getHistoryCount('new', periodHistory, $scope.periodDates));
             }
-            if ($scope.showClosed) {
+            if ($scope.lineChartFilter.showClosed) {
+                $scope.series.push("Closed");
                 $scope.data.push(getHistoryCount('closed', periodHistory, $scope.periodDates));
             }
-            if ($scope.showRejected) {
+            if ($scope.lineChartFilter.showRejected) {
+                $scope.series.push("Rejected");
                 $scope.data.push(getHistoryCount('rejected', periodHistory, $scope.periodDates));
             }
-            if ($scope.showReOpen) {
+            if ($scope.lineChartFilter.showReOpen) {
+                $scope.series.push("ReOpened");
                 $scope.data.push(getHistoryCount('reopen', periodHistory, $scope.periodDates));
             }
-            /*
-                getHistoryCount('fixed', periodHistory, $scope.periodDates),
-                getHistoryCount('ready to retest', periodHistory, $scope.periodDates),
-                getHistoryCount('open', periodHistory, $scope.periodDates),
-                getHistoryCount('new', periodHistory, $scope.periodDates),
-                getHistoryCount('closed', periodHistory, $scope.periodDates),
-                getHistoryCount('rejected', periodHistory, $scope.periodDates),
-                getHistoryCount('reopen', periodHistory, $scope.periodDates)
-             */
         };
 
         almService.subscribe($scope, function() {
@@ -90,8 +92,6 @@
             $scope.LoadLineChart();
         });
         $scope.LoadLineChart();
-
-        $scope.series = ['Fixed', 'Ready to Retest', 'Open', 'New', 'Closed', 'Rejected', 'ReOpened'];
 
         function getHistoryCount(status, periodHistory, dates) {
             var historyList = [];
