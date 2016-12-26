@@ -18,8 +18,10 @@ var appRouter = function(app) {
     app.get("/alm/users/:users", almClient.getUsersDefects);
     app.get("/alm/status/:status", almClient.getStatusDefects);
     app.get("/alm/history/:startDate/:endDate", almClient.getPeriodHistory);
+    app.get("/alm/test/listFolder", almClient.getTestCases);
     app.get("/jira/projects", jira.listAllProjects);
-    app.get("/jira/getCalendar", jira.getCalendar);
+    app.get("/jira/getCalendar/:calendarId/:startDate/:endDate", jira.getCalendar);
+    app.get("/jira/getCalendarsList", jira.getCalendarsList);
 };
 
 module.exports = appRouter;

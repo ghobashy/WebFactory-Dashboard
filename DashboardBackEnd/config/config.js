@@ -21,7 +21,9 @@ exports.appSettings = {
         Entity: "/{Entity Type}s/{Entity ID}",
         EntityHistory: "/{Entity Type}s/{Entity ID}/audits",
         IsAuthenticated: "/qcbin/rest/is-authenticated",
-        SessionAddress: "/qcbin/rest/site-session"
+        SessionAddress: "/qcbin/rest/site-session",
+        TestFolder: "/test-set-folders?query={FolderQuery}",
+        TestSets: "/qcbin/rest/domains/" + _domain + "/projects/" + _Project + "/test-sets?query={test-set-folder.hierarchical-path[HierarchicalPath*]}"
     },
     jira: {
         /*var jira = new JiraApi('https', config.host, config.port, config.user, config.password, '2.0.alpha1'); */

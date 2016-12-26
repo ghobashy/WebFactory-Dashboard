@@ -204,6 +204,29 @@ function getALMHistory(lastModDate, defectRange = ">0") {
         });
 }
 
+exports.getTestCases = function(req, res) {
+    var defectURL = config.appSettings.alm.TestFolder.replace("FolderQuery", "name['OPS-102_Forgotten password - Enter PUID and Captcha']");
+
+    console.log("Get Test Cases");
+    Login().then(
+        function() {
+            qcApi.get(defectURL, {
+                    pageSize: 'max'
+                })
+                .then(function(defect) {
+                    console.log("got  defect history ", defect.Audits.Audit.length);
+                    res.send(defect);
+                }, function(err) {
+                    console.log("error occured: %s", JSON.stringify(err));
+                    res.send(err);
+                });
+        },
+        function(err) {
+            console.log("error occured: %s", JSON.stringify(err));
+            res.send(err);
+        });
+}
+
 function getDefects(defectsURL) {
     qcApi.get(defectsURL, {
             pageSize: 'max',

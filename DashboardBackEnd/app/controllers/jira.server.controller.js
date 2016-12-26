@@ -31,66 +31,99 @@ exports.listAllProjects = function(req, res) {
     });
 };
 
+
 exports.getCalendar = function(req, res) {
     console.log("Load Calendar");
     var tempDate = new Date();
-    var start = new Date(2016, 10, 1);
-    var end = new Date(2016, 10, 30);
-
-
-    var capacitySheet = __dirname + "\\templates\\TeamCapacity.xlsx";
-    var outputFile = __dirname + "\\templates\\TeamCapacity2.xlsx";
-    var workbook = new excel.Workbook();
-
-    var todayLeaves = 0;
-    var membersOnLeave = [];
+    var calendarId = req.params["calendarId"];
+    var start = new Date(req.params["startDate"]);
+    var end = new Date(req.params["endDate"]);
+    console.log("https://confluence.sp.vodafone.com/rest/calendar-services/1.0/calendar/events.json?subCalendarId=" + calendarId + "&userTimeZoneId=Egypt&start=" + start.toISOString().replace(".000", "") + "&end=" + end.toISOString().replace(".000", ""));
     request({
-        uri: "https://confluence.sp.vodafone.com/rest/calendar-services/1.0/calendar/events.json?subCalendarId=0ce24d8e-0ed9-4f02-bafc-ad8ef4bdadf2&userTimeZoneId=Egypt&start=" + start.toISOString().replace(".000", "") + "&end=" + end.toISOString().replace(".000", ""),
+        uri: "https://confluence.sp.vodafone.com/rest/calendar-services/1.0/calendar/events.json?subCalendarId=" + calendarId + "&userTimeZoneId=Egypt&start=" + start.toISOString().replace(".000", "") + "&end=" + end.toISOString().replace(".000", ""),
         json: true,
-        headers: { "Authorization": "Basic " }
+        headers: { "Authorization": "Basic bWFobW91ZC5lbHpvdWhlcnlAdm9kYWZvbmUuY29tOk1hZ2VkMjIxMjg5ISE=" }
     }, function(error, response, body) {
         if (error) return console.log(error);
-
-        workbook.xlsx.readFile(capacitySheet)
-            .then(function() {
-                var worksheet = workbook.getWorksheet('Sheet1');
-                if (worksheet) {
-                    worksheet.eachRow(function(row, rowNumber) {
-                        if (rowNumber >= 2) {
-                            var rotationDate = new Date(start.getFullYear(), start.getMonth(), start.getDate());
-                            var columnId = 2;
-                            var resourceName = row.getCell(1).value;
-                            //console.log("Leaves for " + resourceName + " rotationDate:" + rotationDate + " to:" + end);
-                            while (rotationDate <= end) {
-                                var resourceVacations = body.filter(function(obj) {
-                                    return obj.invitees[0].displayName == resourceName &&
-                                        rotationDate >= new Date(obj.start) &&
-                                        rotationDate <= new Date(obj.end);
-                                });
-                                if (resourceVacations.length > 0) {
-                                    row.getCell(columnId).value = 0;
-                                } else {
-                                    row.getCell(columnId).value = 1;
-                                }
-
-                                rotationDate.setDate(rotationDate.getDate() + 1);
-                                columnId++;
-                                //console.log(resourceName + " has " + resourceVacations.length + " leaves");
-                            }
-
-                        }
-                    });
-                }
-            }).then(function() {
-                return workbook.xlsx.writeFile(outputFile);
-            }).then(function() {
-                console.log("workbook updated " + outputFile);
-            });
+        //console.log(body);
+        //populateTeamCapacity(body, start, end);
         return res.send(body);
     });
 };
 
-/*   if (today >= new Date(obj.start) && today <= new Date(obj.end)) {
-                todayLeaves++;
-                membersOnLeave.push(obj.invitees[0].displayName);
-            } */
+exports.getCalendarsList = function(req, res) {
+    var calendarList = [];
+    request({
+        uri: "https://confluence.sp.vodafone.com/rest/calendar-services/1.0/calendar/subcalendars.json",
+        json: true,
+        headers: { "Authorization": "Basic bWFobW91ZC5lbHpvdWhlcnlAdm9kYWZvbmUuY29tOk1hZ2VkMjIxMjg5ISE=" }
+    }, function(error, response, body) {
+        if (error) return res.send(error);
+        if (body) {
+            _.each(body.payload, function(obj, id) {
+                if (obj.childSubCalendars.length > 0) {
+                    for (var i = 0; i < obj.childSubCalendars.length; i++) {
+                        calendarList.push({
+                            name: obj.childSubCalendars[i].subCalendar.name,
+                            type: obj.childSubCalendars[i].subCalendar.typeKey,
+                            id: obj.childSubCalendars[i].subCalendar.id
+                        });
+                    }
+                }
+            });
+            return res.send(calendarList);
+        }
+
+    });
+};
+
+function populateTeamCapacity(body, start, end) {
+    if (!body.events) {
+        return;
+    }
+    var capacitySheet = __dirname + "\\templates\\TeamCapacity.xlsx";
+    var outputFile = __dirname + "\\templates\\TeamCapacity2.xlsx";
+    var workbook = new excel.Workbook();
+
+    workbook.xlsx.readFile(capacitySheet)
+        .then(function() {
+            var worksheet = workbook.getWorksheet('Sheet1');
+            if (worksheet) {
+                worksheet.eachRow(function(row, rowNumber) {
+                    if (rowNumber >= 2) {
+                        var rotationDate = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+                        var columnId = 2;
+                        var resourceName = row.getCell(1).value;
+                        console.log("Leaves for " + resourceName + " rotationDate:" + rotationDate + " to:" + end);
+                        while (rotationDate <= end) {
+                            worksheet.getRow(1).getCell(columnId).value = new Date(rotationDate.getFullYear(), rotationDate.getMonth(), rotationDate.getDate() + 1);
+
+                            var resourceVacations = body.events.filter(function(obj) {
+                                if (obj.invitees && obj.invitees.length > 0) {
+                                    return obj.invitees[0].displayName == resourceName &&
+                                        rotationDate >= new Date(obj.start) &&
+                                        rotationDate <= new Date(obj.end);
+                                }
+                                return false;
+                            });
+
+                            if (resourceVacations.length > 0) {
+                                row.getCell(columnId).value = 0;
+                            } else if (row.getCell(columnId).value != 0) {
+                                row.getCell(columnId).value = 1;
+                            }
+
+                            rotationDate.setDate(rotationDate.getDate() + 1);
+                            columnId++;
+                            //console.log(resourceName + " has " + resourceVacations.length + " leaves");
+                        }
+
+                    }
+                });
+            }
+        }).then(function() {
+            return workbook.xlsx.writeFile(outputFile);
+        }).then(function() {
+            console.log("workbook updated " + outputFile);
+        });
+}
