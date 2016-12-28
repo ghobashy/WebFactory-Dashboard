@@ -9,7 +9,8 @@ var _ = require('lodash');
 require('./app/models/defect.server.model');
 require('./app/models/defectHistory.server.model');
 require('./app/models/user.server.model');
-
+require('./app/models/team.server.model');
+require('./app/models/resource.server.model');
 // Bootstrap db connection
 var db = mongoose.connect(config.appSettings.db, function(err) {
     if (err) {

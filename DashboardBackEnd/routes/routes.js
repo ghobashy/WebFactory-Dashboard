@@ -7,6 +7,8 @@ var almClient = require('../app/controllers/almClient.server.controller');
 var defects = require('../app/controllers/defect.server.controller');
 var users = require('../app/controllers/user.server.controller');
 var jira = require("../app/controllers/jira.server.controller");
+var resources = require("../app/controllers/resource.server.controller");
+var teams = require("../app/controllers/team.server.controller");
 var init = require('../init');
 
 var appRouter = function(app) {
@@ -22,6 +24,8 @@ var appRouter = function(app) {
     app.get("/jira/projects", jira.listAllProjects);
     app.get("/jira/getCalendar/:calendarId/:startDate/:endDate", jira.getCalendar);
     app.get("/jira/getCalendarsList", jira.getCalendarsList);
+    app.get("/wf/getAllTeams", jira.getAllTeams);
+    app.get("/wf/getAllResources", resources.list);
 };
 
 module.exports = appRouter;

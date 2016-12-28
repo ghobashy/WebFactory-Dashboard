@@ -8,11 +8,14 @@ var config = require('../../config/config.js'),
     request = require('request'),
     jira = require('nodejs-jira-wrapper')({
         username: 'mahmoud.elzouhery@vodafone.com',
-        password: '',
+        password: 'Maged221289!!',
         url: 'https://jira.sp.vodafone.com/rest/api/2/'
     }),
     Client = require('node-rest-client').Client,
-    excel = require('exceljs');
+    excel = require('exceljs'),
+    jiraBaseUrl = 'https://jira.sp.vodafone.com/rest/api/2/',
+    teamsController = require("../../app/controllers/team.server.controller"),
+    resourcesController = require("../../app/controllers/resource.server.controller");
 
 
 exports.listAllProjects = function(req, res) {
@@ -30,7 +33,6 @@ exports.listAllProjects = function(req, res) {
         }
     });
 };
-
 
 exports.getCalendar = function(req, res) {
     console.log("Load Calendar");
@@ -77,53 +79,64 @@ exports.getCalendarsList = function(req, res) {
     });
 };
 
-function populateTeamCapacity(body, start, end) {
-    if (!body.events) {
-        return;
-    }
-    var capacitySheet = __dirname + "\\templates\\TeamCapacity.xlsx";
-    var outputFile = __dirname + "\\templates\\TeamCapacity2.xlsx";
-    var workbook = new excel.Workbook();
+exports.getAllTeams = function(req, res) {
+    teamsController.list({}, function(err, teams) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(teams);
+        }
+    });
+};
 
-    workbook.xlsx.readFile(capacitySheet)
-        .then(function() {
-            var worksheet = workbook.getWorksheet('Sheet1');
-            if (worksheet) {
-                worksheet.eachRow(function(row, rowNumber) {
-                    if (rowNumber >= 2) {
-                        var rotationDate = new Date(start.getFullYear(), start.getMonth(), start.getDate());
-                        var columnId = 2;
-                        var resourceName = row.getCell(1).value;
-                        console.log("Leaves for " + resourceName + " rotationDate:" + rotationDate + " to:" + end);
-                        while (rotationDate <= end) {
-                            worksheet.getRow(1).getCell(columnId).value = new Date(rotationDate.getFullYear(), rotationDate.getMonth(), rotationDate.getDate() + 1);
 
-                            var resourceVacations = body.events.filter(function(obj) {
-                                if (obj.invitees && obj.invitees.length > 0) {
-                                    return obj.invitees[0].displayName == resourceName &&
-                                        rotationDate >= new Date(obj.start) &&
-                                        rotationDate <= new Date(obj.end);
-                                }
-                                return false;
-                            });
+// function populateTeamCapacity(body, start, end) {
+//     if (!body.events) {
+//         return;
+//     }
+//     var capacitySheet = __dirname + "\\templates\\TeamCapacity.xlsx";
+//     var outputFile = __dirname + "\\templates\\TeamCapacity2.xlsx";
+//     var workbook = new excel.Workbook();
 
-                            if (resourceVacations.length > 0) {
-                                row.getCell(columnId).value = 0;
-                            } else if (row.getCell(columnId).value != 0) {
-                                row.getCell(columnId).value = 1;
-                            }
+//     workbook.xlsx.readFile(capacitySheet)
+//         .then(function() {
+//             var worksheet = workbook.getWorksheet('Sheet1');
+//             if (worksheet) {
+//                 worksheet.eachRow(function(row, rowNumber) {
+//                     if (rowNumber >= 2) {
+//                         var rotationDate = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+//                         var columnId = 2;
+//                         var resourceName = row.getCell(1).value;
+//                         console.log("Leaves for " + resourceName + " rotationDate:" + rotationDate + " to:" + end);
+//                         while (rotationDate <= end) {
+//                             worksheet.getRow(1).getCell(columnId).value = new Date(rotationDate.getFullYear(), rotationDate.getMonth(), rotationDate.getDate() + 1);
 
-                            rotationDate.setDate(rotationDate.getDate() + 1);
-                            columnId++;
-                            //console.log(resourceName + " has " + resourceVacations.length + " leaves");
-                        }
+//                             var resourceVacations = body.events.filter(function(obj) {
+//                                 if (obj.invitees && obj.invitees.length > 0) {
+//                                     return obj.invitees[0].displayName == resourceName &&
+//                                         rotationDate >= new Date(obj.start) &&
+//                                         rotationDate <= new Date(obj.end);
+//                                 }
+//                                 return false;
+//                             });
 
-                    }
-                });
-            }
-        }).then(function() {
-            return workbook.xlsx.writeFile(outputFile);
-        }).then(function() {
-            console.log("workbook updated " + outputFile);
-        });
-}
+//                             if (resourceVacations.length > 0) {
+//                                 row.getCell(columnId).value = 0;
+//                             } else if (row.getCell(columnId).value != 0) {
+//                                 row.getCell(columnId).value = 1;
+//                             }
+
+//                             rotationDate.setDate(rotationDate.getDate() + 1);
+//                             columnId++;
+//                             //console.log(resourceName + " has " + resourceVacations.length + " leaves");
+//                         }
+
+//                     }
+//                 });
+//             }
+//         }).then(function() {
+//             return workbook.xlsx.writeFile(outputFile);
+//         }).then(function() {
+//             console.log("workbook updated " + outputFile);
+//         });
+// }
