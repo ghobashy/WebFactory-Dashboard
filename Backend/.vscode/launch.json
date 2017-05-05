@@ -1,10 +1,11 @@
 {
     "version": "0.2.0",
-    "configurations": [{
+    "configurations": [
+        {
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/app.js",
+            "program": "${workspaceRoot}\\index.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
@@ -18,7 +19,7 @@
             },
             "console": "internalConsole",
             "sourceMaps": false,
-            "outDir": null
+            "outFiles": []
         },
         {
             "name": "Attach",
@@ -28,7 +29,7 @@
             "address": "localhost",
             "restart": false,
             "sourceMaps": false,
-            "outDir": null,
+            "outFiles": [],
             "localRoot": "${workspaceRoot}",
             "remoteRoot": null
         },
@@ -39,7 +40,7 @@
             "processId": "${command.PickProcess}",
             "port": 5858,
             "sourceMaps": false,
-            "outDir": null
+            "outFiles": []
         }
     ]
 }
