@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,cAAe;EACb,KAAK,EAAE,IAAI",
-"sources": ["basicTables.scss"],
-"names": [],
-"file": "basicTables.css"
-}
