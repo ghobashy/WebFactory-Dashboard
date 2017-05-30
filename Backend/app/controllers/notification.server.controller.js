@@ -68,7 +68,7 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
         var template = fs.readFileSync('app/templates/EmailTemplate.html', { encoding: 'utf-8' });
         var today = new Date();
         template = template.replace("[DATE]", today.getDate() + "<sup>" + util.getDateOrdinal(today.getDate()) + "</sup> " + util.getMonthName(today.getMonth()) + " " + today.getFullYear());
-        if (wfhEvents && wfhEvents.length == 0) {
+        if (wfhEvents && wfhEvents.length == 0 || !wfhEvents) {
             template = template.replace(/\[SHOW_WFH_EV\]/g, "display:none;");
             console.log("WFH Table visibility: None");
         } else {
@@ -79,16 +79,16 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
             template = template.replace("[WFH_EV]", "<tr><td colspan='3'>" + confluenceController.getGeneralEvent(wfhEvents) + "</td></tr>");
 
         }
-        if (wfReleaseEvents && wfReleaseEvents.length == 0) {
+        if (wfReleaseEvents && wfReleaseEvents.length == 0 || !wfReleaseEvents) {
             template = template.replace(/\[SHOW_WF_EV\]/g, "display:none;");
             console.log("WF Releases Table visibility: None");
         } else {
             template = template.replace(/\[SHOW_WF_EV\]/g, "");
             template = template.replace("[WF_EV]", confluenceController.getGeneralEvent(wfReleaseEvents));
         }
-        if (vacationEvents && vacationEvents.length == 0) {
+        if (vacationEvents && vacationEvents.length == 0 || !vacationEvents) {
             template = template.replace(/\[SHOW_VAC_EV\]/g, "display:none;");
-            console.log("Vacation Releases Table visibility: None");
+            console.log("Vacations Table visibility: None");
         } else {
             template = template.replace(/\[SHOW_VAC_EV\]/g, "");
             template = template.replace("[APLHA_VAC_EV]", confluenceController.getEventMembers("Alpha", vacationEvents));
@@ -97,7 +97,7 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
             template = template.replace("[VAC_EV]", "<tr><td colspan='3'>" + confluenceController.getGeneralEvent(vacationEvents) + "</td></tr>");
 
         }
-        if (wfTrainingEvents && wfTrainingEvents.length == 0) {
+        if (wfTrainingEvents && wfTrainingEvents.length == 0 || !wfTrainingEvents) {
             template = template.replace(/\[SHOW_TR_EV\]/g, "display:none;");
             console.log("Training Releases Table visibility: None");
         } else {
@@ -108,13 +108,14 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
             template = template.replace("[TR_EV]", "<tr><td colspan='3'>" + confluenceController.getGeneralEvent(wfTrainingEvents) + "</td></tr>");
         }
         //fs.writeFileSync('app/templates/EmailTemplate' + new Date().toISOString().replace(/:/g, "-") + '.html', template, { encoding: 'utf-8' });
+        //console.log("Report Written on disk");
         sendEmail(template);
     });
 }
 
 function sendEmail(content) {
     var leads = wfResources.filter(function(obj) {
-        return obj.role == "PM" || obj.role == "DevLead" || obj.role == "TestManager";
+        return obj.role == "PM" || obj.role == "Dev Lead" || obj.role == "Test Manager";
     });
     var leadsEmails = [];
 

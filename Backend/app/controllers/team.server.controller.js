@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    Team = mongoose.model('Team'),
+    Team = mongoose.model('Teams'),
     _ = require('lodash');
 
 /**

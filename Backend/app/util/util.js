@@ -1,7 +1,6 @@
 var winston = require('winston');
 var _ = require('lodash');
 
-
 exports.logger = new(winston.Logger)({
     transports: [
         new(winston.transports.File)({
@@ -22,16 +21,16 @@ exports.getDateOrdinal = function(d) {
         default:
             return "th";
     }
-}
+};
 
 exports.getMonthName = function(month) {
     var monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     ];
     return monthNames[month];
-}
+};
 
 exports.getDayName = function(day) {
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return days[day];
-}
+};

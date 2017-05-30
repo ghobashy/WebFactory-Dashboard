@@ -10,7 +10,21 @@ var ResourceSchema = new Schema({
     },
     team: {
         type: [String]
+    },
+    birthday: {
+        type: Date
+    },
+    jobTitle: {
+        type: String
+    },
+    avatar: {
+        type: String
+    },
+    joinDate: {
+        type: Date
+    },
+    mobileNumber: {
+        type: String
     }
 });
-
-mongoose.model('Resource', ResourceSchema);
+mongoose.model('Resources', ResourceSchema);

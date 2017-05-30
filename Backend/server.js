@@ -1,5 +1,3 @@
-'use strict';
-
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
@@ -26,6 +24,8 @@ var db = mongoose.connect(config.appSettings.db, function(err) {
         console.log(chalk.red(err));
     }
 });
+
+
 
 var app = express();
 

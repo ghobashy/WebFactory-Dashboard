@@ -1,7 +1,8 @@
 'use strict';
 
 exports.appSettings = {
-    db: 'mongodb://sa:password@138.197.37.84:27017/dashboard',
+    //db: 'mongodb://sa:password@138.197.37.84:27017/dashboard',
+    db: 'mongodb://admin:m4N5247sX|+5A5F@ds133331.mlab.com:33331/vf-dashboard',
     port: 3000,
     host: "http://138.197.37.84:3000/app",
     oauth: {
@@ -21,7 +22,7 @@ exports.appSettings = {
         calendarService: "https://confluence.sp.vodafone.com/rest/calendar-services/1.0/calendar/",
         host: "jira.sp.vodafone.com",
         port: 80,
-        authCode: "Basic bWFobW91ZC5lbHpvdWhlcnlAdm9kYWZvbmUuY29tOk1hZ2VkMjIxMjg5Iw==",
+        authCode: "Basic bWFobW91ZC5lbHpvdWhlcnlAdm9kYWZvbmUuY29tOjdZRlBjaWtD",
         calendars: [
             { name: "WFH", id: "784ec280-9524-4548-8a8e-9316e98d3b50" },
             { name: "Trainings", id: "1e7ec852-3d32-4fd5-bc63-c68e09d65752" },
