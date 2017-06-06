@@ -24,8 +24,9 @@ exports.appSettings = {
         port: 80,
         authCode: "Basic bWFobW91ZC5lbHpvdWhlcnlAdm9kYWZvbmUuY29tOjdZRlBjaWtD",
         calendars: [
-            { name: "WFH", id: "784ec280-9524-4548-8a8e-9316e98d3b50" },
-            { name: "Trainings", id: "1e7ec852-3d32-4fd5-bc63-c68e09d65752" },
+            { name: "WFH", id: "9b27698a-305f-4aa5-88e8-5e9a582a1c1c" },
+            { name: "Trainings", id: "1e7ec852-3d32-4fd5-bc63-c68e09d65752" }, //Team Trainings
+            { name: "Trainings", id: "757b3aa3-5347-4222-9eda-d5f1e34bcec2" }, //Leads Trainings
             { name: "Vacations", id: "0ce24d8e-0ed9-4f02-bafc-ad8ef4bdadf2" },
             { name: "WebFactory Events", id: "451835a6-3731-463b-b8fc-5e71942241b5" },
             { name: "WebFactory Events", id: "74e6b22c-dc06-4f16-b089-968052552fea" },

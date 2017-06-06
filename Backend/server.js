@@ -6,7 +6,7 @@ var chalk = require('chalk');
 var _ = require('lodash');
 var jwt = require('express-jwt');
 var rsaValidation = require('auth0-api-jwt-rsa-validation');
-
+var security = require('./app/util/security');
 require('./app/models/team.server.model');
 require('./app/models/resource.server.model');
 require('./app/models/jiraItem.server.model');
@@ -65,7 +65,7 @@ app.use(function(req, res, next) {
 var routes = require("./routes/routes.js")(app);
 var server = app.listen(3000, function() {
     console.log("Listening on port %s...", server.address().port);
-
+    //  security.getAccessToken(function(access_token) { console.log(access_token); });
     process.argv.forEach(function(val, index, array) {
         if (index == 2) {
             switch (val) {

@@ -31,6 +31,7 @@ exports.getCalendar = function(req, res) {
 };
 
 exports.getCalendarsList = function(req, res) {
+    console.log("Get Calendar List");
     var calendarList = [];
     request({
         uri: config.appSettings.jira.calendarService + "subcalendars.json",
