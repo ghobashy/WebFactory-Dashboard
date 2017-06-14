@@ -75,7 +75,7 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
             template = template.replace(/\[SHOW_WFH_EV\]/g, "");
             template = template.replace("[APLHA_WFH_EV]", confluenceController.getEventMembers("Alpha", wfhEvents));
             template = template.replace("[BRAVO_WFH_EV]", confluenceController.getEventMembers("Bravo", wfhEvents));
-            template = template.replace("[CHARLY_WFH_EV]", confluenceController.getEventMembers("Charly", wfhEvents));
+            template = template.replace("[CHARLY_WFH_EV]", confluenceController.getEventMembers("Charlie", wfhEvents));
             var generalWFHEvent = confluenceController.getGeneralEvent(wfhEvents);
             if (generalWFHEvent) {
                 template = template.replace("[WFH_EV]", "<tr><td colspan='3'>" + generalWFHEvent + "</td></tr>");
@@ -97,7 +97,7 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
             template = template.replace(/\[SHOW_VAC_EV\]/g, "");
             template = template.replace("[APLHA_VAC_EV]", confluenceController.getEventMembers("Alpha", vacationEvents));
             template = template.replace("[BRAVO_VAC_EV]", confluenceController.getEventMembers("Bravo", vacationEvents));
-            template = template.replace("[CHARLY_VAC_EV]", confluenceController.getEventMembers("Charly", vacationEvents));
+            template = template.replace("[CHARLY_VAC_EV]", confluenceController.getEventMembers("Charlie", vacationEvents));
             var generalVacEvent = confluenceController.getGeneralEvent(vacationEvents);
             if (generalVacEvent) {
                 template = template.replace("[VAC_EV]", "<tr><td colspan='3'>" + generalVacEvent + "</td></tr>");
@@ -112,7 +112,7 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
             template = template.replace(/\[SHOW_TR_EV\]/g, "");
             template = template.replace("[APLHA_TR_EV]", confluenceController.getEventMembers("Alpha", wfTrainingEvents));
             template = template.replace("[BRAVO_TR_EV]", confluenceController.getEventMembers("Bravo", wfTrainingEvents));
-            template = template.replace("[CHARLY_TR_EV]", confluenceController.getEventMembers("Charly", wfTrainingEvents));
+            template = template.replace("[CHARLY_TR_EV]", confluenceController.getEventMembers("Charlie", wfTrainingEvents));
             var generalWFTEvent = confluenceController.getGeneralEvent(wfTrainingEvents);
             if (generalWFTEvent) {
                 template = template.replace("[TR_EV]", "<tr><td colspan='3'>" + generalWFTEvent + "</td></tr>");
