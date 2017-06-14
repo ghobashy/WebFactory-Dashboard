@@ -28,6 +28,7 @@ exports.appSettings = {
             { name: "Trainings", id: "1e7ec852-3d32-4fd5-bc63-c68e09d65752" }, //Team Trainings
             { name: "Trainings", id: "757b3aa3-5347-4222-9eda-d5f1e34bcec2" }, //Leads Trainings
             { name: "Vacations", id: "0ce24d8e-0ed9-4f02-bafc-ad8ef4bdadf2" },
+            { name: "Vacations", id: "2b2b83e6-a4b2-487c-b539-0a5adfa3b5bf" },
             { name: "WebFactory Events", id: "451835a6-3731-463b-b8fc-5e71942241b5" },
             { name: "WebFactory Events", id: "74e6b22c-dc06-4f16-b089-968052552fea" },
             { name: "WebFactory Events", id: "b1da7fae-2dc5-4bf0-af36-191f4e6af9fe" },
