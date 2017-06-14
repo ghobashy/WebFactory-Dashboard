@@ -128,14 +128,14 @@ function renderReportContent(calendars, startDate, endDate, wfResources) {
 
 function sendEmail(content) {
     var leads = wfResources.filter(function(obj) {
-        return obj.role == "PM" || obj.role == "Dev Lead" || obj.role == "Test Manager";
+        return obj.jobTitle == "PM" || obj.jobTitle == "Dev Lead" || obj.jobTitle == "Test Manager" || obj.jobTitle == "DL Manager";
     });
     var leadsEmails = [];
 
     for (var i = 0; i < leads.length; i++) {
         leadsEmails.push(new helper.Email(leads[i].email, leads[i].name));
     }
-    leadsEmails.push(new helper.Email("Enas.Nasr@vodafone.com", "Enas Nasr"));
+    // leadsEmails.push(new helper.Email("Enas.Nasr@vodafone.com", "Enas Nasr"));
     //leadsEmails.push(new helper.Email("mahmoud.elzouhery@vodafone.com", "Mahmoud El-Zouhery"));
     console.log(leadsEmails);
 
