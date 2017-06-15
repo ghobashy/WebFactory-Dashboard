@@ -65,13 +65,14 @@ var getUserItems = exports.getUserItems = function(usersList, startAt, maxResult
                     }
                 }
             }
+            if (id == body.issues.length - 1) {
+                if (body.maxResults < body.total) {
+                    usersList.push(user);
+                    getUserItems(usersList, maxResults + 1, maxResults + 101, callback);
+                } else {
+                    getUserItems(usersList, 0, 100, callback);
+                }
+            }
         });
-
-        if (body.maxResults < body.total) {
-            usersList.push(user);
-            getUserItems(usersList, maxResults + 1, maxResults + 101, callback);
-        } else {
-            getUserItems(usersList, 0, 100, callback);
-        }
     });
 };
