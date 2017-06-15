@@ -29,7 +29,7 @@ var getUserItems = exports.getUserItems = function(usersList, callback) {
         if (error) {
             callback(error);
         }
-        fs.appendFile('app/templates/info.log', user.name + ":" + body.issues.length, { encoding: 'utf-8' });
+        fs.appendFile('app/templates/info.log', user.name + ":" + body.issues.length + "\r\n", { encoding: 'utf-8' });
         _.each(body.issues, function(obj, id) {
             var itemObj = {
                 key: obj.key,
@@ -47,7 +47,7 @@ var getUserItems = exports.getUserItems = function(usersList, callback) {
             jiraItemsController.create(itemObj, function(err) { callback(err); });
 
             if (obj.changelog.histories && obj.changelog.histories.length > 0) {
-                fs.appendFile('app/templates/info.log', user.name + ":" + obj.key + ":" + obj.changelog.histories + " Change Logs", { encoding: 'utf-8' });
+                fs.appendFile('app/templates/info.log', user.name + ":" + obj.key + ":" + obj.changelog.histories.length + " Change Logs" + "\r\n", { encoding: 'utf-8' });
                 for (var j = 0; j < obj.changelog.histories.length; j++) {
                     var history = obj.changelog.histories[j];
                     if (history.items && history.items.length > 0) {
