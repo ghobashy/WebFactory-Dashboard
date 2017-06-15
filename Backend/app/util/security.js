@@ -8,7 +8,7 @@ var authData = {
     client_secret: config.appSettings.oauth.clientKey,
     grant_type: config.appSettings.oauth.grant_type,
     audience: config.appSettings.oauth.audience
-}
+};
 
 exports.getAccessToken = function(callback) {
     request({
