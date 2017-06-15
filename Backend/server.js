@@ -76,7 +76,7 @@ var server = app.listen(3000, function() {
                 case ("jira"):
                     console.log("Start jira job");
                     var resourcesList = resourcesController.list({
-                            $or: [{ team: "Bravo", role: "Dev" }, { team: "Bravo", role: "DevLead" }]
+                            $or: [{ jobTitle: "Dev" }, { jobTitle: "DevLead" }]
                         },
                         function(err, resourceList) {
                             if (err) {
