@@ -17,7 +17,7 @@ var getUserItems = exports.getUserItems = function(usersList, startAt, maxResult
         return callback(null);
     }
     var user = usersList.pop();
-    var url = config.appSettings.jira.jiraBaseUrl + "search?jql=assignee='" + user.name + "'&project=WF&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults;
+    var url = config.appSettings.jira.jiraBaseUrl + "search?jql=assignee%3D\"" + user.email + "\"%26project%3DWF&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults;
     console.log(url);
     fs.appendFile('app/templates/info.log', url + "\r\n", { encoding: 'utf-8' });
     request({
@@ -28,7 +28,6 @@ var getUserItems = exports.getUserItems = function(usersList, startAt, maxResult
         if (error) {
             callback(error);
         }
-        fs.appendFile('app/templates/info.log', user.name + ":" + body.issues.length + "\r\n", { encoding: 'utf-8' });
         _.each(body.issues, function(obj, id) {
             var itemObj = {
                 key: obj.key,
@@ -46,7 +45,6 @@ var getUserItems = exports.getUserItems = function(usersList, startAt, maxResult
             jiraItemsController.create(itemObj, function(err) { callback(err); });
 
             if (obj.changelog.histories && obj.changelog.histories.length > 0) {
-                fs.appendFile('app/templates/info.log', user.name + ":" + obj.key + ":" + obj.changelog.histories.length + " Change Logs" + "\r\n", { encoding: 'utf-8' });
                 for (var j = 0; j < obj.changelog.histories.length; j++) {
                     var history = obj.changelog.histories[j];
                     if (history.items && history.items.length > 0) {
