@@ -1,5 +1,3 @@
-'use strict';
-
 var config = require('../../config/config.js'),
     fs = require('fs'),
     http = require('http'),
