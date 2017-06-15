@@ -17,10 +17,11 @@ var getUserItems = exports.getUserItems = function(usersList, startAt, maxResult
         return callback(null);
     }
     var user = usersList.pop();
-    console.log(config.appSettings.jira.jiraBaseUrl + "search?jql=project=WF&assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults);
-    fs.appendFile('app/templates/info.log', config.appSettings.jira.jiraBaseUrl + "search?jql=project=WF&assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults + "\r\n", { encoding: 'utf-8' });
+    var url = config.appSettings.jira.jiraBaseUrl + "search?jql=assignee='" + user.name + "'&project=WF&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults;
+    console.log(url);
+    fs.appendFile('app/templates/info.log', url + "\r\n", { encoding: 'utf-8' });
     request({
-        uri: config.appSettings.jira.jiraBaseUrl + "search?jql=project=WF&assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=100" + maxResults,
+        uri: url,
         json: true,
         headers: { "Authorization": config.appSettings.jira.authCode }
     }, function(error, response, body) {
