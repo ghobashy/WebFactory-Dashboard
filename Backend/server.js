@@ -83,7 +83,7 @@ var server = app.listen(3000, function() {
                                 console.log(chalk.red(err));
                                 return;
                             }
-                            jiraController.getUserItems(resourceList, function(err) {
+                            jiraController.getUserItems(resourceList, 0, 100, function(err) {
                                 if (err) {
                                     console.log(chalk.red(err));
                                 } else {

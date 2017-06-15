@@ -11,18 +11,16 @@ var config = require('../../config/config.js'),
     jiraItemsController = require("../../app/controllers/jiraItem.server.controller"),
     jiraItemsChangeLogController = require("../../app/controllers/jiraItem.changelog.server.controller");
 
-var getUserItems = exports.getUserItems = function(usersList, callback) {
+var getUserItems = exports.getUserItems = function(usersList, startAt, maxResults, callback) {
     console.log("Load User Items");
-    // jiraItemsController.find().sort('-updated').limit(1).exec(function(err, items) {
-
-    // });
     if (usersList.length === 0) {
         return callback(null);
     }
     var user = usersList.pop();
-    console.log(config.appSettings.jira.jiraBaseUrl + "search?jql=assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog");
+    console.log(config.appSettings.jira.jiraBaseUrl + "search?jql=project=WF&assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults);
+    fs.appendFile('app/templates/info.log', config.appSettings.jira.jiraBaseUrl + "search?jql=project=WF&assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults + "\r\n", { encoding: 'utf-8' });
     request({
-        uri: config.appSettings.jira.jiraBaseUrl + "search?jql=assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog",
+        uri: config.appSettings.jira.jiraBaseUrl + "search?jql=project=WF&assignee='" + user.name + "'&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=100" + maxResults,
         json: true,
         headers: { "Authorization": config.appSettings.jira.authCode }
     }, function(error, response, body) {
@@ -66,9 +64,15 @@ var getUserItems = exports.getUserItems = function(usersList, callback) {
 
                         }
                     }
-                };
+                }
             }
         });
-        getUserItems(usersList, callback);
+
+        if (body.maxResults < body.total) {
+            usersList.push(user);
+            getUserItems(usersList, maxResults + 1, maxResults + 101, callback);
+        } else {
+            getUserItems(usersList, 0, 100, callback);
+        }
     });
 };
