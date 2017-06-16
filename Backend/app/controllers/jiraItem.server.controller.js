@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Module dependencies.
  */
@@ -36,6 +34,16 @@ exports.create = function(req, callback) {
 exports.get = function(filter, callback) {
     JiraItem.findOne(filter, function(err, items) {
         callback(err, items);
+    });
+};
+exports.getLastUpdateDate = function(callback) {
+    JiraItem.findOne().sort({ updated: 'descending' }).exec(function(err, items) {
+        if (err) {
+            console.error(err);
+            callback(err);
+        } else {
+            callback(null, items);
+        }
     });
 };
 

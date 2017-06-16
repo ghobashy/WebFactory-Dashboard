@@ -1,11 +1,11 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppTranslationModule } from '../../app.translation.module';
 import { NgaModule } from '../../theme/nga.module';
 
 import { Dashboard } from './dashboard.component';
-import { routing }       from './dashboard.routing';
+import { routing } from './dashboard.routing';
 
 import { PopularApp } from './popularApp';
 import { PieChart } from './pieChart';
@@ -22,7 +22,7 @@ import { PieChartService } from './pieChart/pieChart.service';
 import { TodoService } from './todo/todo.service';
 import { TrafficChartService } from './trafficChart/trafficChart.service';
 import { UsersMapService } from './usersMap/usersMap.service';
-import {DashboardService} from './dashboard.service';
+import { DashboardService } from './dashboard.service';
 
 @NgModule({
   imports: [
@@ -50,9 +50,14 @@ import {DashboardService} from './dashboard.service';
     PieChartService,
     TodoService,
     TrafficChartService,
-    UsersMapService
+    UsersMapService,
+    DashboardService
   ]
 })
 export class DashboardModule {
-  
+  constructor(private _dashboardService: DashboardService) {
+  }
+  public getAuthKey(event) {
+    let authCode = this._dashboardService.getAuthCode();
+  }
 }

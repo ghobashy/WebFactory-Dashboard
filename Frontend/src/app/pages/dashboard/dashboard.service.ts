@@ -5,7 +5,7 @@ import { environment } from "../../../environments/environment";
 @Injectable()
 export class DashboardService {
     constructor(private http: Http) { }
-    getAuthCode() {
+    public getAuthCode() {
         var authData = {
             client_id: environment.oauth.clientID,
             client_secret: environment.oauth.clientKey,
@@ -15,11 +15,11 @@ export class DashboardService {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        this.http.post(environment.oauth.tokenUrl, authData, { headers: headers })
+        return this.http.post(environment.oauth.tokenUrl, authData, { headers: headers })
             .subscribe(data => {
-               return data;
+                return data;
             }, error => {
                 console.log(JSON.stringify(error.json()));
             });
-    }    
+    }
 }

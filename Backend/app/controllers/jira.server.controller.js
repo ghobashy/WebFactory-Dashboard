@@ -9,15 +9,19 @@ var config = require('../../config/config.js'),
     teamsController = require("../../app/controllers/team.server.controller"),
     resourcesController = require("../../app/controllers/resource.server.controller"),
     jiraItemsController = require("../../app/controllers/jiraItem.server.controller"),
-    jiraItemsChangeLogController = require("../../app/controllers/jiraItem.changelog.server.controller");
-
+    jiraItemsChangeLogController = require("../../app/controllers/jiraItem.changelog.server.controller"),
+    lastUpdatedDateCondition = "";
+exports.setlastUpdatedDateCondition = function(condition) {
+    lastUpdatedDateCondition = condition;
+};
 var getUserItems = exports.getUserItems = function(usersList, startAt, maxResults, callback) {
     console.log("Load User Items");
     if (usersList.length === 0) {
         return callback(null);
     }
+
     var user = usersList.pop();
-    var url = config.appSettings.jira.jiraBaseUrl + "search?jql=assignee%3D\"" + user.email + "\"%26project%3DWF&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults;
+    var url = config.appSettings.jira.jiraBaseUrl + "search?jql=assignee%3D\"" + user.email + "\"%26project%3DWF" + lastUpdatedDateCondition + "&fields=summary,status,customfield_10212,priority,customfield_12938,customfield_18284,issuetype,created,updated,components&expand=changelog&startAt=" + startAt + "&maxResults=" + maxResults;
     console.log(url);
     fs.appendFile('app/templates/info.log', url + "\r\n", { encoding: 'utf-8' });
     request({

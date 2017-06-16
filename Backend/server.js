@@ -16,6 +16,7 @@ var CronJob = require('cron').CronJob;
 var notificationController = require('./app/controllers/notification.server.controller');
 var jiraController = require('./app/controllers/jira.server.controller');
 var resourcesController = require("./app/controllers/resource.server.controller");
+var jiraItemsController = require("./app/controllers/jiraItem.server.controller");
 
 // Bootstrap db connection
 var db = mongoose.connect(config.appSettings.db, function(err) {
@@ -75,20 +76,29 @@ var server = app.listen(3000, function() {
                     break;
                 case ("jira"):
                     console.log("Start jira job");
-                    var resourcesList = resourcesController.list({},
-                        function(err, resourceList) {
-                            if (err) {
-                                console.log(chalk.red(err));
-                                return;
-                            }
-                            jiraController.getUserItems(resourceList, 0, 100, function(err) {
+                    jiraItemsController.getLastUpdateDate(function(err, lastUpdatedObj) {
+                        if (lastUpdatedObj) {
+                            var lastUpdateDate = new Date(lastUpdatedObj.updated);
+                            jiraController.setlastUpdatedDateCondition("%26updated>%27" + lastUpdateDate.getFullYear() + "/" + (lastUpdateDate.getMonth() + 1) + "/" + lastUpdateDate.getDate() + " " + lastUpdateDate.getHours() + ":" + lastUpdateDate.getMinutes() + "%27");
+                        } else {
+                            jiraController.setLastUpdatedDateCondition("");
+                        }
+                        var resourcesList = resourcesController.list({},
+                            function(err, resourceList) {
                                 if (err) {
                                     console.log(chalk.red(err));
-                                } else {
-                                    console.log(chalk.green("Users Issues imported"));
+                                    return;
                                 }
+                                jiraController.getUserItems(resourceList, 0, 100, function(err) {
+                                    if (err) {
+                                        console.log(chalk.red(err));
+                                    } else {
+                                        console.log(chalk.green("Users Issues imported"));
+                                    }
+                                });
                             });
-                        });
+                    });
+
                     break;
             }
         }
