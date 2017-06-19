@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Module dependencies.
  */
@@ -51,15 +49,15 @@ function update(record, callback) {
 };
 
 
-exports.list = function(query, callback) {
+exports.list = function(req, res) {
     console.log("==== Load Teams ====");
-    Team.find(query).exec(function(err, teamList) {
+    Team.find().exec(function(err, teamList) {
         if (err) {
             console.error(err);
-            callback(err);
+            res.status(500).send(err);
         } else {
             console.log("Load Teams OK");
-            callback(null, teamList);
+            res.status(200).send(teamList);
         }
     });
 };

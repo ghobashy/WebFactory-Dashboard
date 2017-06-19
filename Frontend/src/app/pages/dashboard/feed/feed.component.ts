@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import {FeedService} from './feed.service';
+import { FeedService } from './feed.service';
 
 @Component({
   selector: 'feed',
@@ -8,17 +8,20 @@ import {FeedService} from './feed.service';
   styleUrls: ['./feed.scss']
 })
 export class Feed {
+  @Input()
+  private teamName:string;
 
-  public feed:Array<Object>;
+  public feed: Array<Object>;
 
-  constructor(private _feedService:FeedService) {
+  constructor(private _feedService: FeedService) {
   }
 
   ngOnInit() {
     this._loadFeed();
+    console.log(this.teamName);
   }
 
-  expandMessage (message){
+  expandMessage(message) {
     message.expanded = !message.expanded;
   }
 

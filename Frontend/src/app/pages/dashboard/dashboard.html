@@ -1,11 +1,8 @@
 <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-        <ba-card title="Alpha" baCardClass="large-card with-scroll feed-panel">
-            <feed></feed>
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" *ngFor="let team of teams">
+        <ba-card title="{{team.name}}" baCardClass="large-card with-scroll feed-panel">
+            <feed [teamName]="team.name"></feed>
         </ba-card>
-    </div>
-    <div class="button-wrapper">
-        <button type="button" class="btn btn-primary" (click)="getAuthKey()">Primary</button>
     </div>
 </div>
 

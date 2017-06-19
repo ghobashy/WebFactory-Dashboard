@@ -1,8 +1,7 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 /*
@@ -17,6 +16,13 @@ import { GlobalState } from './global.state';
 import { NgaModule } from './theme/nga.module';
 import { PagesModule } from './pages/pages.module';
 
+import { APP_INITIALIZER } from '@angular/core';
+import { AuthService } from './auth.service';
+import { ConfigService } from './common/config.service';
+
+/*HTTP Modules*/
+import { HttpModule, XHRBackend, Http, ResponseOptions, XSRFStrategy, BrowserXhr } from '@angular/http';
+import { HttpInterceptor } from './common/http-interceptor.service';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -29,10 +35,15 @@ export type StoreType = {
   restoreInputValues: () => void,
   disposeOldHosts: () => void
 };
+export function httpFactory(browserXHR: BrowserXhr, requestOptions: ResponseOptions, xsrfStrategy: XSRFStrategy, configService: ConfigService, router: Router) {
+  return new HttpInterceptor(browserXHR, requestOptions, xsrfStrategy, configService, router);
+}
 
-/**
- * `AppModule` is the main entry point into Angular2's bootstraping process
- */
+export function authConfigLoader(authConfig: AuthService) {
+  return () => authConfig.loadAuthConfig();
+}
+
+
 @NgModule({
   bootstrap: [App],
   declarations: [
@@ -50,7 +61,20 @@ export type StoreType = {
     routing
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    AuthService,
+    ConfigService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: authConfigLoader,
+      deps: [AuthService],
+      multi: true
+    },
+    {
+      provide: XHRBackend,
+      useFactory: httpFactory,
+      deps: [BrowserXhr, ResponseOptions, XSRFStrategy, ConfigService, Router]
+    }
   ]
 })
 

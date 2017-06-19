@@ -54,10 +54,6 @@ import { DashboardService } from './dashboard.service';
     DashboardService
   ]
 })
-export class DashboardModule {
-  constructor(private _dashboardService: DashboardService) {
-  }
-  public getAuthKey(event) {
-    let authCode = this._dashboardService.getAuthCode();
-  }
+
+export class DashboardModule {  
 }
