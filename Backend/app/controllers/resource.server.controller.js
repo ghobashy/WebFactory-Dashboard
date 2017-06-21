@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Module dependencies.
  */
@@ -60,6 +58,21 @@ exports.list = function(query, callback) {
         } else {
             console.log("Load Resources OK");
             callback(null, ResourceList);
+        }
+    });
+};
+
+exports.getTeamMembers = function(req, res) {
+    var teamName = req.params["team"];
+    console.log("==== Load Team Member ====");
+    console.log(teamName);
+    Resource.find({ "team": teamName }).exec(function(err, teamMembers) {
+        if (err) {
+            console.error(err);
+            res.status(500).send(err);
+        } else {
+            console.log("Load Teams OK");
+            res.status(200).send(teamMembers);
         }
     });
 };

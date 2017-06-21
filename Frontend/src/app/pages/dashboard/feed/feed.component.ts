@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
 
 import { FeedService } from './feed.service';
 
@@ -9,7 +10,7 @@ import { FeedService } from './feed.service';
 })
 export class Feed {
   @Input()
-  private teamName:string;
+  private teamName: string;
 
   public feed: Array<Object>;
 
@@ -18,7 +19,7 @@ export class Feed {
 
   ngOnInit() {
     this._loadFeed();
-    console.log(this.teamName);
+
   }
 
   expandMessage(message) {
@@ -26,6 +27,24 @@ export class Feed {
   }
 
   private _loadFeed() {
-    this.feed = this._feedService.getData();
+    this.feed = [];
+    this._feedService.getTeamMembers(this.teamName).subscribe((response: Response) => {
+      let data = response.json();
+      for (let resource of data) {
+        this.feed.push({
+          type: 'text-message',
+          name: resource.name,
+          jobTitle: " (" + resource.jobTitle + ")",
+          email: resource.email,
+          text: '' ,
+          time: '',
+          ago: '',
+          expanded: true,
+          avatar: 'avatar'
+        });
+      }
+    }, error => {
+      console.log(JSON.stringify(error.json()));
+    });
   }
 }

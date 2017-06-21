@@ -13,6 +13,7 @@ var appRouter = function(app) {
     app.get("/wf/getAllResources", resources.list);
     app.get("/defects/:user", jiraChangeLog.listUserDefects);
     app.get("/wf/teams", teams.list);
+    app.get("/wf/teamMembers/:team", resources.getTeamMembers);
 };
 
 module.exports = appRouter;
