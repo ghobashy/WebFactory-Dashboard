@@ -36,9 +36,10 @@ export class Feed {
           name: resource.name,
           jobTitle: " (" + resource.jobTitle + ")",
           email: resource.email,
-          text: '' ,
+          text: '',
           time: '',
           ago: '',
+          level: resource.level,
           expanded: true,
           avatar: 'avatar'
         });

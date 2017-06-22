@@ -25,6 +25,9 @@ var ResourceSchema = new Schema({
     },
     mobileNumber: {
         type: String
+    },
+    level: {
+        type: String
     }
 });
 mongoose.model('Resources', ResourceSchema);

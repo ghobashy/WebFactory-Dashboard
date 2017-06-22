@@ -1,0 +1,140 @@
+[{
+        "_id": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "technology": "HTML",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "technology": "CSS",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "technology": "ES5",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "technology": "ES6",
+        "group": "JS",
+        "intermediateScore": 1,
+        "seniorScore": 3,
+        "leadScore": 5
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "technology": "JQuery",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "technology": "NodeJs",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "technology": "AngularJS",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "technology": "Angular2",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "technology": "TypeScript",
+        "group": "JS",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "technology": "Design Patterns",
+        "group": "Design",
+        "intermediateScore": 3,
+        "seniorScore": 5,
+        "leadScore": 8
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "technology": "OO Concepts",
+        "group": "Design",
+        "intermediateScore": 3,
+        "seniorScore": 5,
+        "leadScore": 8
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "technology": "UML",
+        "group": "Design",
+        "intermediateScore": 3,
+        "seniorScore": 5,
+        "leadScore": 8
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "technology": "Unit Testing",
+        "group": "Design",
+        "intermediateScore": 5,
+        "seniorScore": 8,
+        "leadScore": 10
+    },
+    {
+        "_id": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "technology": "Web Security",
+        "group": "Design",
+        "intermediateScore": 3,
+        "seniorScore": 3,
+        "leadScore": 3
+    }

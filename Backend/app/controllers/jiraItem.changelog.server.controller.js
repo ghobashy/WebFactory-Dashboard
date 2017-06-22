@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Module dependencies.
  */
@@ -53,7 +51,7 @@ exports.list = function(query, callback) {
 };
 
 exports.listUserDefects = function(req, res) {
-    var user = req.param["user"];
+    var user = req.params["user"];
     JiraItemChangeLog.find({ "field": "assignee", "toValue": user }).exec(function(err, items) {
         if (err) {
             console.error(err);
@@ -71,3 +69,23 @@ exports.listUserDefects = function(req, res) {
         }
     });
 };
+
+// exports.getTeamMemberStats = function(req, res) {
+//     var user = req.params.user;
+//     JiraItemChangeLog.find({ "field": "assignee", "toValue": user }).exec(function(err, items) {
+//         if (err) {
+//             console.error(err);
+//             res.status(500).send(err);
+//         } else {
+//             var defectList = [];
+//             _.each(items, function(obj, id) {
+//                 JiraItemController.list({ "key": obj.key }, function(err, item) {
+//                     if (!err) {
+//                         defectList.push(obj);
+//                     }
+//                 });
+//             });
+//             res.send(items);
+//         }
+//     });
+// };

@@ -66,7 +66,7 @@ exports.getTeamMembers = function(req, res) {
     var teamName = req.params["team"];
     console.log("==== Load Team Member ====");
     console.log(teamName);
-    Resource.find({ "team": teamName }).exec(function(err, teamMembers) {
+    Resource.find({ "team": teamName }).sort({ jobTitle: 1 }).exec(function(err, teamMembers) {
         if (err) {
             console.error(err);
             res.status(500).send(err);

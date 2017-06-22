@@ -11,6 +11,7 @@ require('./app/models/team.server.model');
 require('./app/models/resource.server.model');
 require('./app/models/jiraItem.server.model');
 require('./app/models/jiraItem.changelog.model');
+require('./app/models/skills.server.model');
 
 var CronJob = require('cron').CronJob;
 var notificationController = require('./app/controllers/notification.server.controller');

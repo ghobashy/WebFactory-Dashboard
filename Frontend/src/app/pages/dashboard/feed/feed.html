@@ -7,6 +7,9 @@
             <div class="message-header">
                 <span class="author">{{ message.name }} {{ message.jobTitle}}</span>
             </div>
+            <div class="message-header" *ngIf="message.level">
+                <span class="author">{{ message.level }}</span>
+            </div>
             <div class="message-content line-clamp" [ngClass]="{'line-clamp-2' : !message.expanded}">
                 {{ message.email }}
             </div>

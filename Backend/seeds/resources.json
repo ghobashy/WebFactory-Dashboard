@@ -1,4 +1,7 @@
 [{
+        "_id": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
         "name": "Ahmed Osama-Youssef",
         "email": "ahmed.osama-youssef@vodafone.com",
         "team": ["Bravo"],
@@ -6,9 +9,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
         "name": "Ahmed Ramez-Mahmoud",
         "email": "ahmed.ramez-mahmoud@vodafone.com",
         "team": ["Alpha"],
@@ -16,9 +23,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
         "name": "Ali AbdAllah-Ahmed",
         "email": "ali.abdallah-ahmed@vodafone.com",
         "team": ["Bravo"],
@@ -26,9 +37,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
         "name": "Ali Zidan",
         "email": "ali.zidan@vodafone.com",
         "team": ["Bravo"],
@@ -36,19 +51,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
-        "name": "AlShimaa AlHamaymy",
-        "email": "alshimaa.alhamaymy@vodafone.com",
-        "team": ["Charlie"],
-        "birthday": "",
-        "jobTitle": "FE",
-        "avatar": "",
-        "joinDate": "",
-        "mobileNumber": ""
-    },
-    {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000009"
+        },
         "name": "Catherine Ghobrial-RizkAllah",
         "email": "catherine.ghobrial-rizkallah@vodafone.com",
         "team": ["Bravo"],
@@ -59,9 +68,12 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900000a"
+        },
         "name": "Enas Nasr",
         "email": "enas.nasr@vodafone.com",
-        "team": ["Alpha", "Bravo", "Charlie"],
+        "team": ["Bravo"],
         "birthday": "",
         "jobTitle": "DL Manager",
         "avatar": "",
@@ -69,6 +81,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900000b"
+        },
         "name": "Farah Ali-Hassan",
         "email": "farah.ali-hassan@vodafone.com",
         "team": ["Charlie"],
@@ -79,6 +94,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
         "name": "Lobna Fouad",
         "email": "lobna.fouad@vodafone.com",
         "team": ["Alpha"],
@@ -86,9 +104,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
         "name": "Mahmoud ElZouhery",
         "email": "mahmoud.elzouhery@vodafone.com",
         "team": ["Alpha"],
@@ -96,9 +118,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Senior"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
         "name": "Mai AbdElFattah",
         "email": "mai.abdelfattah@vodafone.com",
         "team": ["Alpha"],
@@ -106,9 +132,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900000f"
+        },
         "name": "Marina Adel-Shenouda",
         "email": "marina.adel-shenouda@vodafone.com",
         "team": ["Bravo"],
@@ -119,6 +149,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000010"
+        },
         "name": "Mayar AbdElGaleel",
         "email": "mayar.abdelgaleel@vodafone.com",
         "team": ["Bravo"],
@@ -129,6 +162,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
         "name": "Michael Morgan",
         "email": "michael.morgan@vodafone.com",
         "team": ["Bravo"],
@@ -136,19 +172,26 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Senior"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000012"
+        },
         "name": "Mirna Moustafa-Ahmed",
         "email": "mirna.moustafa-ahmed@vodafone.com",
         "team": ["Charlie"],
         "birthday": "",
-        "jobTitle": "TesterS",
+        "jobTitle": "Tester",
         "avatar": "",
         "joinDate": "",
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000013"
+        },
         "name": "Moataz Saadany",
         "email": "moataz.saadany@vodafone.com",
         "team": ["Alpha"],
@@ -159,9 +202,15 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000014"
+        },
         "name": "Mohamed Abdo-Ali",
         "email": "mohamed.abdo-ali@vodafone.com",
-        "team": ["Alpha", "Bravo", "Charlie"],
+        "team": ["Alpha",
+            "Bravo",
+            "Charlie"
+        ],
         "birthday": "",
         "jobTitle": "Arch",
         "avatar": "",
@@ -169,6 +218,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000015"
+        },
         "name": "Mohamed Gamal-ElKhalil",
         "email": "mohamed.gamal-elkhalil@vodafone.com",
         "team": ["Alpha"],
@@ -179,6 +231,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
         "name": "Mohamed Mostafa-Ghobashy",
         "email": "mohamed.mostafa-ghobashy@vodafone.com",
         "team": ["Bravo"],
@@ -186,9 +241,13 @@
         "jobTitle": "Dev Lead",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Lead"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
         "name": "Mohamed Safwat-Owais",
         "email": "mohamed.safwat-owais@vodafone.com",
         "team": ["Charlie"],
@@ -196,19 +255,26 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000018"
+        },
         "name": "Mona Taftazani",
         "email": "mona.taftazani@vodafone.com",
         "team": ["Alpha"],
         "birthday": "",
-        "jobTitle": "Test Manager",
+        "jobTitle": "Tester",
         "avatar": "",
         "joinDate": "",
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
         "name": "Mostafa Hussien-Hassan",
         "email": "mostafa.hussien-hassan@vodafone.com",
         "team": ["Alpha"],
@@ -216,9 +282,13 @@
         "jobTitle": "Dev Lead",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Lead"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900001a"
+        },
         "name": "Mostafa Seddik-Mohamed",
         "email": "mostafa.seddik-mohamed@vodafone.com",
         "team": ["Alpha"],
@@ -229,6 +299,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900001b"
+        },
         "name": "Nouran ElZeiny",
         "email": "nouran.elzeiny@vodafone.com",
         "team": ["Bravo"],
@@ -239,6 +312,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900001c"
+        },
         "name": "Nouran Hassan",
         "email": "nouran.hassan@vodafone.com",
         "team": ["Alpha"],
@@ -249,6 +325,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900001d"
+        },
         "name": "Nourhan Atef-Ali",
         "email": "nourhan.atef-ali@vodafone.com",
         "team": ["Alpha"],
@@ -259,6 +338,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
         "name": "Omar Makeen",
         "email": "omar.makeen@vodafone.com",
         "team": ["Charlie"],
@@ -266,9 +348,13 @@
         "jobTitle": "Dev Lead",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Lead"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
         "name": "Ramy Medhat",
         "email": "ramy.medhat@vodafone.com",
         "team": ["Alpha"],
@@ -276,9 +362,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
         "name": "Rania Hany-Emam",
         "email": "rania.hany-emam@vodafone.com",
         "team": ["Bravo"],
@@ -286,9 +376,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000021"
+        },
         "name": "Rehab ElFawal",
         "email": "rehab.elfawal@vodafone.com",
         "team": ["Bravo"],
@@ -299,6 +393,9 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000022"
+        },
         "name": "SaadElDin Mahmoud",
         "email": "saadeldin.mahmoud@vodafone.com",
         "team": ["Charlie"],
@@ -309,6 +406,22 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "594b833bf687d5e844000001"
+        },
+        "name": "Sara Youssef-Ahmed",
+        "email": "Sara.Youssef-Ahmed@vodafone.com",
+        "team": ["Alpha"],
+        "birthday": "",
+        "jobTitle": "Test Manager",
+        "avatar": "",
+        "joinDate": "",
+        "mobileNumber": ""
+    },
+    {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
         "name": "Samir Mohamed-Ahmed",
         "email": "samir.mohamed-ahmed@vodafone.com",
         "team": ["Charlie"],
@@ -316,9 +429,13 @@
         "jobTitle": "FE",
         "avatar": "",
         "joinDate": "",
-        "mobileNumber": ""
+        "mobileNumber": "",
+        "level": "Intermediate"
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000024"
+        },
         "name": "Tarek Ahmed-Mohamed",
         "email": "tarek.ahmed-mohamed@vodafone.com",
         "team": ["Bravo"],
@@ -329,16 +446,24 @@
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000025"
+        },
         "name": "Tarek ElAtribi",
         "email": "tarek.elatribi@vodafone.com",
-        "team": ["Alpha", "Charlie"],
+        "team": ["Alpha",
+            "Charlie"
+        ],
         "birthday": "",
-        "jobTitle": "Test Manager",
+        "jobTitle": "Tester",
         "avatar": "",
         "joinDate": "",
         "mobileNumber": ""
     },
     {
+        "_id": {
+            "$oid": "592d4b17d981ba0439000026"
+        },
         "name": "Yasmine Hamdy",
         "email": "yasmine.hamdy1@vodafone.com",
         "team": ["Charlie"],
@@ -347,5 +472,19 @@
         "avatar": "",
         "joinDate": "",
         "mobileNumber": ""
+    },
+    {
+        "_id": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "name": "AlShimaa AlHamaymy",
+        "email": "AlShimaa.AlHamaymy@vodafone.com",
+        "team": ["Charlie"],
+        "birthday": "",
+        "jobTitle": "FE",
+        "avatar": "",
+        "joinDate": "",
+        "mobileNumber": "",
+        "level": "Senior"
     }
 ]
