@@ -4,9 +4,9 @@ import { environment } from "../../../environments/environment";
 import { AuthService } from "../../auth.service";
 @Injectable()
 export class DashboardService {
-
+    public currentResource;
     constructor(private http: Http, private authService: AuthService) { }
     getTeams() {
-        return this.http.get(environment.backendUrl + "wf/teams");            
+        return this.http.get(environment.backendUrl + "wf/teams");
     }
 }

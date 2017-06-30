@@ -1,6 +1,5 @@
-import {Component} from '@angular/core';
-
-import {GlobalState} from '../../../global.state';
+import { Component } from '@angular/core';
+import { GlobalState } from '../../../global.state';
 
 @Component({
   selector: 'ba-content-top',
@@ -9,13 +8,16 @@ import {GlobalState} from '../../../global.state';
 })
 export class BaContentTop {
 
-  public activePageTitle:string = '';
+  public activePageTitle: string = '';
 
-  constructor(private _state:GlobalState) {
+  constructor(private _state: GlobalState) {
     this._state.subscribe('menu.activeLink', (activeLink) => {
       if (activeLink) {
         this.activePageTitle = activeLink.title;
       }
     });
+  }
+  public setTitle(title: string) {
+    this.activePageTitle = title;
   }
 }

@@ -9,7 +9,7 @@ import { routing } from './dashboard.routing';
 
 import { PopularApp } from './popularApp';
 import { PieChart } from './pieChart';
-import { TrafficChart } from './trafficChart';
+import { TrafficChart } from './../../common/trafficChart';
 import { UsersMap } from './usersMap';
 import { LineChart } from './lineChart';
 import { Feed } from './feed';
@@ -20,7 +20,7 @@ import { FeedService } from './feed/feed.service';
 import { LineChartService } from './lineChart/lineChart.service';
 import { PieChartService } from './pieChart/pieChart.service';
 import { TodoService } from './todo/todo.service';
-import { TrafficChartService } from './trafficChart/trafficChart.service';
+import { TrafficChartService } from './../../common/trafficChart/trafficChart.service';
 import { UsersMapService } from './usersMap/usersMap.service';
 import { DashboardService } from './dashboard.service';
 
@@ -35,7 +35,7 @@ import { DashboardService } from './dashboard.service';
   declarations: [
     PopularApp,
     PieChart,
-    TrafficChart,
+    //TrafficChart,
     UsersMap,
     LineChart,
     Feed,
@@ -49,7 +49,7 @@ import { DashboardService } from './dashboard.service';
     LineChartService,
     PieChartService,
     TodoService,
-    TrafficChartService,
+  //  TrafficChartService,
     UsersMapService,
     DashboardService
   ]

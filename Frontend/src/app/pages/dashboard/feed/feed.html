@@ -1,25 +1,25 @@
 <div class="feed-messages-container">
-    <div class="feed-message" *ngFor="let message of feed" (click)="expandMessage(message)">
-        <div class="message-icon" *ngIf="message.type == 'text-message'">
-            <img class="photo-icon" src="{{ ( message.avatar | baProfilePicture ) }}">
+    <div class="feed-message" *ngFor="let resource of resources" (click)="getResourceDetails(resource)">
+        <div class="message-icon" *ngIf="resource.type == 'text-message'">
+            <img class="photo-icon" src="{{ ( resource.avatar | baProfilePicture ) }}">
         </div>
         <div class="text-block text-message">
             <div class="message-header">
-                <span class="author">{{ message.name }} {{ message.jobTitle}}</span>
+                <span class="author">{{ resource.name }} {{ resource.jobTitle}}</span>
             </div>
-            <div class="message-header" *ngIf="message.level">
-                <span class="author">{{ message.level }}</span>
+            <div class="message-header" *ngIf="resource.level">
+                <span class="author">{{ resource.level }}</span>
             </div>
-            <div class="message-content line-clamp" [ngClass]="{'line-clamp-2' : !message.expanded}">
-                {{ message.email }}
+            <div class="message-content line-clamp" [ngClass]="{'line-clamp-2' : !resource.expanded}">
+                {{ resource.email }}
             </div>
 
-            <div [ngClass]="{'hidden': !message.expanded}" class="message-time">
+            <div [ngClass]="{'hidden': !resource.expanded}" class="message-time">
                 <div class="post-time">
-                    {{ message.time }}
+                    {{ resource.time }}
                 </div>
                 <div class="ago-time">
-                    {{ message.ago }}
+                    {{ resource.ago }}
                 </div>
             </div>
         </div>

@@ -1,140 +1,20 @@
-[{
-        "_id": {
-            "$oid": "594c1ef15cbae66440000001"
-        },
-        "technology": "HTML",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000002"
-        },
-        "technology": "CSS",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000003"
-        },
-        "technology": "ES5",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000004"
-        },
-        "technology": "ES6",
-        "group": "JS",
-        "intermediateScore": 1,
-        "seniorScore": 3,
-        "leadScore": 5
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000005"
-        },
-        "technology": "JQuery",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000006"
-        },
-        "technology": "NodeJs",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000007"
-        },
-        "technology": "AngularJS",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000008"
-        },
-        "technology": "Angular2",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae66440000009"
-        },
-        "technology": "TypeScript",
-        "group": "JS",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae6644000000a"
-        },
-        "technology": "Design Patterns",
-        "group": "Design",
-        "intermediateScore": 3,
-        "seniorScore": 5,
-        "leadScore": 8
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae6644000000b"
-        },
-        "technology": "OO Concepts",
-        "group": "Design",
-        "intermediateScore": 3,
-        "seniorScore": 5,
-        "leadScore": 8
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae6644000000c"
-        },
-        "technology": "UML",
-        "group": "Design",
-        "intermediateScore": 3,
-        "seniorScore": 5,
-        "leadScore": 8
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae6644000000d"
-        },
-        "technology": "Unit Testing",
-        "group": "Design",
-        "intermediateScore": 5,
-        "seniorScore": 8,
-        "leadScore": 10
-    },
-    {
-        "_id": {
-            "$oid": "594c1ef15cbae6644000000e"
-        },
-        "technology": "Web Security",
-        "group": "Design",
-        "intermediateScore": 3,
-        "seniorScore": 3,
-        "leadScore": 3
-    }
+[{ "_id": { "$oid": "594c1ef15cbae66440000001" }, "technology": "HTML", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae66440000002" }, "technology": "CSS", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae66440000003" }, "technology": "ES5", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae66440000004" }, "technology": "ES6", "group": "JS", "intermediateScore": 1, "seniorScore": 3, "leadScore": 5 },
+    { "_id": { "$oid": "594c1ef15cbae66440000005" }, "technology": "JQuery", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae66440000006" }, "technology": "NodeJs", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae66440000007" }, "technology": "AngularJS", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae66440000008" }, "technology": "Angular2", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae66440000009" }, "technology": "TypeScript", "group": "JS", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae6644000000a" }, "technology": "Design Patterns", "group": "Design", "intermediateScore": 3, "seniorScore": 5, "leadScore": 8 },
+    { "_id": { "$oid": "594c1ef15cbae6644000000b" }, "technology": "OO Concepts", "group": "Design", "intermediateScore": 3, "seniorScore": 5, "leadScore": 8 },
+    { "_id": { "$oid": "594c1ef15cbae6644000000c" }, "technology": "UML", "group": "Design", "intermediateScore": 3, "seniorScore": 5, "leadScore": 8 },
+    { "_id": { "$oid": "594c1ef15cbae6644000000d" }, "technology": "Angular 1 Unit testing", "group": "Design", "intermediateScore": 5, "seniorScore": 8, "leadScore": 10 },
+    { "_id": { "$oid": "594c1ef15cbae6644000000e" }, "technology": "Web Security", "group": "Design", "intermediateScore": 3, "seniorScore": 3, "leadScore": 3 },
+    { "_id": { "$oid": "5956a0b9d22963b448000001" }, "technology": "opentext", "group": "Enablement", "intermediateScore": 3, "seniorScore": 3, "leadScore": 3 },
+    { "_id": { "$oid": "5956a0e5d22963b448000002" }, "technology": "Modeling", "group": "Enablement", "intermediateScore": 1, "seniorScore": 1, "leadScore": 1 },
+    { "_id": { "$oid": "5956a118d22963b448000003" }, "technology": "Mongo", "group": "Databases", "intermediateScore": 1, "seniorScore": 3, "leadScore": 5 },
+    { "_id": { "$oid": "5956a140d22963b448000004" }, "technology": "Ionic 2", "group": "Mobile", "intermediateScore": 3, "seniorScore": 5, "leadScore": 8 },
+    { "_id": { "$oid": "5956a348d22963b448000005" }, "technology": "Angular 2 Unit testing", "group": "JS", "intermediateScore": 1, "seniorScore": 3, "leadScore": 5 }
+]

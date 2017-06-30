@@ -18,7 +18,7 @@ export class HttpInterceptor extends XHRBackend {
   }
   createConnection(request: Request): XHRConnection {
     if (request.url.indexOf(environment.backendUrl) > -1) {
-      request.headers.append('Authorization', 'Bearer '+this._configService.OAuthCode);
+      request.headers.append('Authorization', 'Bearer ' + this._configService.OAuthCode);
     }
     let connection: XHRConnection = super.createConnection(request);
 

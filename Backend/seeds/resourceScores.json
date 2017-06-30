@@ -1,0 +1,3649 @@
+[{
+        "_id": {
+            "$oid": "5956d7c7d22963b448000006"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000007"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000008"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000009"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800000a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800000b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800000c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800000d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800000e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800000f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000010"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000011"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000012"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000013"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000014"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000015"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000016"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000017"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000018"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001e"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000019"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800001a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800001b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800001c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800001d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800001e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800001f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000020"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000021"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000022"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000023"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000024"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000025"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000026"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000027"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000028"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000029"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800002a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800002b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000d"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800002c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800002d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800002e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800002f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000030"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000031"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000032"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000033"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000034"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000035"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000036"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000037"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000038"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000039"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800003a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800003b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800003c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800003d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800003e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000004"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800003f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000040"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000041"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000042"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000043"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000044"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000045"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000046"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000047"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000048"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000049"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800004a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800004b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800004c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800004d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800004e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800004f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000050"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000051"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000005"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000052"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000053"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000054"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000055"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000056"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000057"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000058"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000059"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800005a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800005b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800005c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800005d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800005e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800005f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000060"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000061"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000062"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000063"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000064"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000006"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000065"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000066"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000067"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000068"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000069"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800006a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800006b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800006c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800006d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800006e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800006f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000070"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000071"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000072"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000073"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000074"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000075"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000076"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000077"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000007"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000078"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000079"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800007a"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800007b"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800007c"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800007d"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800007e"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800007f"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000080"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000081"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000082"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000083"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000084"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000085"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000086"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000087"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000088"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000089"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800008a"
+        },
+        "resource": {
+            "$oid": "5940f46d4072b66c10000001"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800008b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800008c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800008d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800008e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800008f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000090"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000091"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000092"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000093"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000094"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000095"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000096"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000097"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000098"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000099"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800009a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800009b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800009c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800009d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000016"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800009e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800009f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a0"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a1"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a2"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a3"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a4"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a5"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a6"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a7"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a8"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000a9"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000aa"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ab"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ac"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ad"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ae"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000af"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b0"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000c"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b1"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b2"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b3"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b4"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b5"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b6"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b7"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b8"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000b9"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ba"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000bb"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000bc"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000bd"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000be"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000bf"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c0"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c1"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c2"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c3"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900000e"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c4"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c5"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c6"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c7"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c8"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000c9"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ca"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000cb"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000cc"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000cd"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ce"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000cf"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d0"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d1"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d2"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d3"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d4"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d5"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d6"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000011"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d7"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d8"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000d9"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000da"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000db"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000dc"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000dd"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000de"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000df"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e0"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e1"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e2"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e3"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e4"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e5"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e6"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e7"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e8"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000e9"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000017"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ea"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000eb"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ec"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ed"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ee"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ef"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f0"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f1"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f2"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f3"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f4"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f5"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f6"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 8
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f7"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f8"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000f9"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000fa"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000fb"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000fc"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000019"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000fd"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000fe"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b4480000ff"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000100"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000101"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000102"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000103"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000104"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000105"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000106"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000107"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000108"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000109"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800010a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800010b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 5
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800010c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800010d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800010e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800010f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba043900001f"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000110"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000111"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000112"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 4
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000113"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000114"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 6
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000115"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000116"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 7
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000117"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000118"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000119"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800011a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800011b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800011c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 3
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800011d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800011e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 2
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800011f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000120"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 1
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000121"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000122"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000023"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000123"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000124"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000125"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000126"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000004"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000127"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000128"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000006"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000129"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000007"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800012a"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000008"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800012b"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae66440000009"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800012c"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "5956a0b9d22963b448000001"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800012d"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "5956a0e5d22963b448000002"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800012e"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000a"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b44800012f"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000b"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000130"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000c"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000131"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000d"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000132"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "5956a348d22963b448000005"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000133"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "594c1ef15cbae6644000000e"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000134"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "5956a118d22963b448000003"
+        },
+        "score": 0
+    },
+    {
+        "_id": {
+            "$oid": "5956d7c7d22963b448000135"
+        },
+        "resource": {
+            "$oid": "592d4b17d981ba0439000020"
+        },
+        "technology": {
+            "$oid": "5956a140d22963b448000004"
+        },
+        "score": 0
+    }
+]

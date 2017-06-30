@@ -12,12 +12,15 @@ require('./app/models/resource.server.model');
 require('./app/models/jiraItem.server.model');
 require('./app/models/jiraItem.changelog.model');
 require('./app/models/skills.server.model');
+require('./app/models/resourceScore.server.model');
 
 var CronJob = require('cron').CronJob;
 var notificationController = require('./app/controllers/notification.server.controller');
 var jiraController = require('./app/controllers/jira.server.controller');
 var resourcesController = require("./app/controllers/resource.server.controller");
 var jiraItemsController = require("./app/controllers/jiraItem.server.controller");
+var skillsController = require("./app/controllers/skills.server.controller");
+var resourceSkillsController = require("./app/controllers/resourceScore.server.controller");
 
 // Bootstrap db connection
 var db = mongoose.connect(config.appSettings.db, function(err) {
@@ -100,6 +103,43 @@ var server = app.listen(3000, function() {
                             });
                     });
 
+                    break;
+                case ("skill"):
+                    var resourcesList = resourcesController.list({},
+                        function(err, resourceList) {
+                            if (err) {
+                                console.log(chalk.red(err));
+                                return;
+                            }
+                            var skills = skillsController.list({},
+                                function(err, skillList) {
+                                    if (err) {
+                                        console.log(chalk.red(err));
+                                        return;
+                                    }
+                                    resourceList.forEach(function(resource) {
+                                        skillList.forEach(function(skill) {
+                                            var resourceScore = {
+                                                resource: resource._id,
+                                                technology: skill._id,
+                                            };
+                                            if (resource.level == "Intermediate") {
+                                                resourceScore.score = skill.intermediateScore;
+                                            } else if (resource.level == "Senior") {
+                                                resourceScore.score = skill.seniorScore;
+                                            } else if (resource.level == "Lead") {
+                                                resourceScore.score = skill.leadScore;
+                                            }
+                                            resourceSkillsController.create(resourceScore, function(err) {
+                                                if (err) {
+                                                    console.log(err);
+                                                }
+                                            });
+                                        });
+
+                                    });
+                                });
+                        });
                     break;
             }
         }

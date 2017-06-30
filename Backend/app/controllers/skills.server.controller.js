@@ -11,15 +11,15 @@ exports.get = function(technologyname, callback) {
     });
 };
 
-exports.list = function(req, res) {
+exports.list = function(query, callback) {
     console.log("==== Load Skills ====");
-    Skill.find().exec(function(err, skillList) {
+    Skill.find(query).exec(function(err, skillList) {
         if (err) {
             console.error(err);
-            res.status(500).send(err);
+            callback(err);
         } else {
             console.log("Load Skills OK");
-            res.status(200).send(skillList);
+            callback(null, skillList);
         }
     });
 };
