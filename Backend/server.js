@@ -146,36 +146,52 @@ var server = app.listen(3000, function() {
     });
 
 
+    //15 8 * * 0-4 /root/send_capacity.sh
+    var job = new CronJob('00 30 10 * * 0-4', function() {
+            /*
+             * Runs every weekday (Sunday through Thursday)
+             * at 10:30:00 AM. It does not run on Saturday
+             * or Friday.
+             */
+            notificationController.SendDailyCapacityReports();
+        }, function() {
+            /* This function is executed when the job stops */
+        },
+        true,
+        'Africa/Cairo'
+    );
 
-
-
-    // var job = new CronJob('00 30 10 * * 0-4', function() {
-    //         /*
-    //          * Runs every weekday (Sunday through Thursday)
-    //          * at 10:30:00 AM. It does not run on Saturday
-    //          * or Friday.
-    //          */
-    //         notificationController.SendDailyCapacityReports();
-    //         var resourcesList = resourcesController.list({
-    //                 $or: [{ team: "Bravo", role: "Dev" }, { team: "Bravo", role: "DevLead" }]
-    //             },
-    //             function(err, resourceList) {
-    //                 if (err) {
-    //                     console.log(chalk.red(err));
-    //                     return;
-    //                 }
-    //                 jiraController.getUserItems(resourceList, function(err) {
-    //                     if (err) {
-    //                         console.log(chalk.red(err));
-    //                     } else {
-    //                         console.log(chalk.green("Users Issues imported"));
-    //                     }
-    //                 });
-    //             });
-    //     }, function() {
-    //         /* This function is executed when the job stops */
-    //     },
-    //     true,
-    //     'Africa/Cairo'
-    // );
+    var job2 = new CronJob('0 */60 * * * *', function() {
+            /*
+             * Runs hour.
+             */
+            console.log("Start jira job");
+            jiraItemsController.getLastUpdateDate(function(err, lastUpdatedObj) {
+                if (lastUpdatedObj) {
+                    var lastUpdateDate = new Date(lastUpdatedObj.updated);
+                    jiraController.setlastUpdatedDateCondition("%26updated>%27" + lastUpdateDate.getFullYear() + "/" + (lastUpdateDate.getMonth() + 1) + "/" + lastUpdateDate.getDate() + " " + lastUpdateDate.getHours() + ":" + lastUpdateDate.getMinutes() + "%27");
+                } else {
+                    jiraController.setLastUpdatedDateCondition("");
+                }
+                var resourcesList = resourcesController.list({},
+                    function(err, resourceList) {
+                        if (err) {
+                            console.log(chalk.red(err));
+                            return;
+                        }
+                        jiraController.getUserItems(resourceList, 0, 100, function(err) {
+                            if (err) {
+                                console.log(chalk.red(err));
+                            } else {
+                                console.log(chalk.green("Users Issues imported"));
+                            }
+                        });
+                    });
+            });
+        }, function() {
+            /* This function is executed when the job stops */
+        },
+        true,
+        'Africa/Cairo'
+    );
 });
