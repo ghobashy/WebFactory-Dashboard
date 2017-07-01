@@ -10,8 +10,8 @@ export const environment = {
         clientKey: 'gUTWGJAYFigpMeP3Rqh5pPqfiafD2__ABs6gDBxICEDBggsQ9Esa6bC-eD6BYTzO',
         grant_type: 'client_credentials',
         audience: 'vf-Dashboard',
-        tokenUrl: "https://elzouhery.auth0.com/oauth/token",
+        tokenUrl: "/auth/oauth/token",
         issuer: "https://elzouhery.auth0.com/"
     },
-    backendUrl: "http://localhost:3000/"
+    backendUrl: "/api/"
 };
