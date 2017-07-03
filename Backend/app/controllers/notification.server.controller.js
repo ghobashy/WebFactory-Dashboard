@@ -30,7 +30,7 @@ exports.SendDailyCapacityReports = function() {
             return;
         }
         wfResources = resources;
-        teamsController.list({}, function(err, teams) {
+        teamsController.getAll({}, function(err, teams) {
             if (err) {
                 console.log(error);
                 return;

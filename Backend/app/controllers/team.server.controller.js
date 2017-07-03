@@ -50,14 +50,24 @@ function update(record, callback) {
 
 
 exports.list = function(req, res) {
+    getAll({}, function(err, teams) {
+        if (err) {
+            console.log(error);
+            res.status(500).send(error);
+        }
+        res.status(200).send(teams);
+    });
+};
+
+var getAll = exports.getAll = function(query, callback) {
     console.log("==== Load Teams ====");
-    Team.find().exec(function(err, teamList) {
+    Team.find(query).exec(function(err, teamList) {
         if (err) {
             console.error(err);
-            res.status(500).send(err);
+            callback(err);
         } else {
             console.log("Load Teams OK");
-            res.status(200).send(teamList);
+            callback(null, teamList);
         }
     });
 };
