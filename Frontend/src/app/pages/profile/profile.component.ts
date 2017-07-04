@@ -10,7 +10,7 @@ import { BaContentTop } from '../../theme/components/baContentTop/baContentTop.c
   styleUrls: ['./profile.scss']
 })
 export class Profile {
-  private currentResource: any;
+  public currentResource: any;
   constructor(private _configService: ConfigService, private _baContentTop: BaContentTop) {
   }
   ngOnInit() {

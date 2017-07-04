@@ -17,6 +17,7 @@ export class HttpInterceptor extends XHRBackend {
     super(_browserXHR, _baseResponseOptions, _xsrfStrategy);
   }
   createConnection(request: Request): XHRConnection {
+    request.headers.append('Access-Control-Allow-Origin', "*");
     if (request.url.indexOf(environment.backendUrl) > -1) {
       request.headers.append('Authorization', 'Bearer ' + this._configService.OAuthCode);
     }
