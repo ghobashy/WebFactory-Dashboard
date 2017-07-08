@@ -13,6 +13,9 @@ var SkillSchema = new Schema({
     },
     leadScore: {
         type: Number
+    },
+    group: {
+        type: String
     }
 });
 
