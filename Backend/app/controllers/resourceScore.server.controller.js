@@ -1,64 +1,140 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-    ResourceScore = mongoose.model('ResourceScores'),
-    _ = require('lodash');
 
-exports.get = function(resourceId, callback) {
-    ResourceScore.findOne({ resource: resourceId }, function(err, skillMatrix) {
+var mongoose = require('mongoose'), ResourceScore = mongoose.model('ResourceScores');
+
+exports.get = function (resourceId, callback) {
+    ResourceScore.findOne({ resource: resourceId }, function (err, skillMatrix) {
         callback(err, skillMatrix);
     });
 };
 
-exports.list = function(req, res) {
-    console.log("==== Load ResourceScores ====");
-    var filter = "";
-    if (req.params.resource) {
-        filter = { 'resource': req.params.resource };
-        console.log(filter);
+exports.list = (req, res) => {
+
+    const query = ResourceScore.find();
+
+    if (req.query.resource) {
+        query.where('resource', req.query.resource);
     }
-    ResourceScore.find(filter).populate("resource").populate("technology").exec(function(err, skillMatrix) {
+
+    if (req.query.technology) {
+        query.where('technology', req.query.technology);
+    }
+
+    query.populate("resource").populate("technology").exec(function (err, skillMatrix) {
+
         if (err) {
+
             console.error(err);
-            res.status(500).send(err);
         } else {
-            console.log("Load ResourceScores OK");
-            res.status(200).send(skillMatrix);
+
+            console.log("Load skillMatrix OK");
+            res.json(skillMatrix);
         }
     });
+
 };
 
-exports.create = function(req, callback) {
-    ResourceScore.count({ resource: req.resource, technology: req.technology }, function(err, count) {
+exports.create = (req, res) => {
+
+    var resourceScore = new ResourceScore({
+        technology: req.body.technology,
+        resource: req.body.resource,
+        score: req.body.score
+    });
+
+    resourceScore.save((err, newScore) => {
+
         if (err) {
-            callback(err);
+
+            console.error(err);
+        } else {
+
+            console.log('Resource score saved successfully!');
+            res.json(newScore);
         }
-        if (count === 0) {
-            var resourceScore = new ResourceScore(req);
-            resourceScore.save(function(err) {
+    });
+
+};
+
+exports.getResourcesForMaxScoreInTechnology = (req, res) => {
+
+    if (req.query.level) {
+
+        let technologyObjectId = new mongoose.mongo.ObjectId(req.params.technology);
+
+        const query = ResourceScore.aggregate([
+            {
+                $lookup:
+                {
+                    from: 'resources',
+                    localField: 'resource',
+                    foreignField: '_id',
+                    as: 'resource'
+                }
+            },
+            {
+                $match: { 'resource.level': req.query.level, 'technology': technologyObjectId }
+            },
+            { $sort: { score: -1 } }
+        ]);
+
+        query.exec((err, data) => {
+
+            if (err) {
+                console.error(err);
+            }
+            else {
+                res.json(data);
+            }
+        });
+
+    } else {
+
+        ResourceScore.find({ technology: req.params.technology })
+            .populate('resource')
+            .sort('-score')
+            .exec((err, skillMatrix) => {
+
                 if (err) {
-                    callback(err);
+                    console.error(err);
                 } else {
-                    console.log('Resource score saved successfully!');
+
+                    console.log("Load skillMatrix OK");
+                    res.json(skillMatrix);
                 }
             });
-        } else {
-            update(req, callback);
-        }
-    });
+    }
 };
 
-function update(record, callback) {
+exports.update = (record, callback) => {
+
     console.log("update Resource score id ", record.resource);
+
     Resource.update({ resource: record.resource, technology: req.technology }, {
         $set: {
             resource: record.resource,
             technology: record.technology,
             score: record.score
         }
-    }, function(err, result) {
+    }, function (err, result) {
         console.log(result);
         callback(err, result);
     });
-}
+};
+
+exports.remove = function (req, res) {
+
+    ResourceScore.findOneAndRemove({ _id: new mongoose.mongo.ObjectId(req.params.score) }).exec(function (err, removedScore) {
+
+        if (err) {
+
+            console.error(err);
+        } else {
+
+            console.log("score is deleted");
+            res.json(removedScore);
+        }
+    });
+};
