@@ -1,4 +1,5 @@
 var Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
 
 
 module.exports = {
@@ -22,7 +23,13 @@ module.exports = {
             group: Joi.string()
         },
         params: {
-            skill: Joi.string().hex()
+            skill: Joi.objectId()
+        }
+    },
+
+    deleteSkill: {
+        params: {
+            skill: Joi.objectId()
         }
     }
 

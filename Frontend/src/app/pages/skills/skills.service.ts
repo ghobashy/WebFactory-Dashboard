@@ -8,9 +8,11 @@ export class SkillsService {
 
 
   getAllSkills() {
-    return this.skillsDataService.getAllSkills().map((skills) => {
-      return skills.json();
-    });
+    return this.skillsDataService.getAllSkills().map((skills) => skills.json());
   }
 
+  public removeSkill(skillId: string) {
+
+    return this.skillsDataService.removeSkill(skillId).map((removedSkill) => removedSkill.json());
+  }
 }

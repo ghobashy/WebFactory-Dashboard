@@ -14,4 +14,9 @@ export class SkillsDataService {
     return this.http.get(environment.backendUrl + 'wf/skills');
   }
 
+  public removeSkill(skillId: string) {
+
+    return this.http.delete(environment.backendUrl + 'wf/skills/' + skillId);
+  }
+
 }
