@@ -1,0 +1,83 @@
+<div class="widgets">
+  <div class="row">
+    <ba-card title="Basic Example" baCardClass="with-scroll" class="data-table-container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="row">
+            <label class="col-sm-12 label-control">Sort by</label>
+          </div>
+          <div class="row">
+
+            <div class="offset-sm-1 col-sm-5">
+              <div class="row">
+                <select class="form-control input-sm" [(ngModel)]="sortBy">
+                            <option ngValue="">Select sorting category</option>
+                            <option ngValue="technology">Technology</option>
+                            <option ngValue="intermediate Score">Intermediate Score</option>
+                            <option ngValue="seniorScore">Senior Score</option>
+                            <option ngValue="Lead Score">Lead Score</option>
+                            <option ngValue="group">group</option> 
+                        </select>
+              </div>
+            </div>
+            <div class="offset-sm-1 col-sm-5">
+              <div class="row">
+                <select class="form-control input-sm" [(ngModel)]="sortOrder">
+                            <option ngValue="asc">Ascending</option>
+                            <option ngValue="desc">Descending</option>
+                        </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">User information</div>
+
+        <table class="table table-striped" [mfData]="data | dataFilter : filterQuery" #mf="mfDataTable" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+          <thead>
+            <tr>
+              <th style="width: 20%" colspan="2">Actions</th>
+              <th style="width: 30%">
+                <mfDefaultSorter by="name">Technology</mfDefaultSorter>
+              </th>
+              <th style="width: 5%">
+                <mfDefaultSorter by="email">Intermediate Score</mfDefaultSorter>
+              </th>
+              <th style="width: 5%">
+                <mfDefaultSorter by="age">Senior Score</mfDefaultSorter>
+              </th>
+              <th style="width: 5%">
+                <mfDefaultSorter by="age">Lead Score</mfDefaultSorter>
+              </th>
+              <th style="width: 30%">
+                <mfDefaultSorter by="age">Group</mfDefaultSorter>
+              </th>
+            </tr>
+            <tr>
+              <th colspan="8">
+                Filter by name:
+                <input class="form-control" [(ngModel)]="filterQuery" />
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of mf.data">
+              <td>
+                <button (click)="remove(item)" class="btn btn-success">EDIT</button>
+              </td>
+              <td>
+                <button (click)="remove(item)" class="btn btn-danger">DELETE</button>
+              </td>
+              <td>{{item.technology}}</td>
+              <td>{{item.intermediateScore}}</td>
+              <td>{{item.seniorScore}}</td>
+              <td>{{item.leadScore}}</td>
+              <td>{{item.group}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ba-card>
+  </div>
+</div>

@@ -19,6 +19,10 @@
     },
     "menu": {
       "dashboard": "Dashboard",
+      "skills": "Skills",
+      "list": "List All Skills",
+      "add": "Add New Skill",
+      "edit": "Edit Skill",
       "editors": "Editors",
       "ck_editor": "CKEditor",
       "components": "Components",
