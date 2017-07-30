@@ -46,7 +46,7 @@ export class TrafficChartService {
   }
 
   getSkillMatrix(resourceId: any) {
-    return this.http.get(environment.backendUrl + "wf/skillMatrix/" + resourceId);
+    return this.http.get(environment.backendUrl + "wf/skillMatrix?resource=" + resourceId);
   }
 
   private getRandomColor(): String {

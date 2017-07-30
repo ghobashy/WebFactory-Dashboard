@@ -15,6 +15,44 @@ export const PAGES_MENU = [
         }
       },
       {
+        path: 'skills',
+        data: {
+          menu: {
+            title: 'general.menu.skills',
+            icon: 'ion-android-home',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        },
+        children: [
+          {
+            path: 'list',
+            data: {
+              menu: {
+                title: 'general.menu.list',
+              }
+            }
+          },
+          {
+            path: 'add',
+            data: {
+              menu: {
+                title: 'general.menu.add',
+              }
+            }
+          },
+          {
+            path: 'edit',
+            data: {
+              menu: {
+                title: 'general.menu.edit',
+              }
+            }
+          }
+        ]
+      },
+      {
         path: 'editors',
         data: {
           menu: {
@@ -208,14 +246,14 @@ export const PAGES_MENU = [
               }
             }
           },
-           {
-             path: 'hottables',
-             data: {
-               menu: {
-                 title: 'Hot Tables',
-               }
-             }
-           }
+          {
+            path: 'hottables',
+            data: {
+              menu: {
+                title: 'Hot Tables',
+              }
+            }
+          }
         ]
       },
       {

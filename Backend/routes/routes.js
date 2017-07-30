@@ -36,14 +36,14 @@ var appRouter = function (app) {
     app.get("/wf/skillMatrix/sortScoreByTechnology/:technology", resourceScoreController.getResourcesForMaxScoreInTechnology);
     app.post("/wf/skillMatrix", validate(resourcesScoreValidator.createScore), resourceScoreController.create);
     app.put("/wf/skillMatrix/:score", validate(resourcesScoreValidator.updateScore), resourceScoreController.update);
-    app.delete("/wf/skillMatrix/:score", resourceScoreController.remove);
+    app.delete("/wf/skillMatrix/:score", validate(resourcesScoreValidator.deleteScore), resourceScoreController.remove);
 
 
     /* routes for skills*/
     app.get("/wf/skills", skills.list);
     app.post("/wf/skills", validate(skillsValidator.createSkill), skills.create);
     app.put("/wf/skills/:skill", validate(skillsValidator.updateSkill), skills.update);
-    app.delete("/wf/skills/:skill", skills.remove);
+    app.delete("/wf/skills/:skill", validate(skillsValidator.deleteSkill), skills.remove);
 
 };
 

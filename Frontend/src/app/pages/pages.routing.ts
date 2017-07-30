@@ -1,4 +1,4 @@
-import { Routes, RouterModule }  from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { Pages } from './pages.component';
 import { ModuleWithProviders } from '@angular/core';
 // noinspection TypeScriptValidateTypes
@@ -18,7 +18,7 @@ export const routes: Routes = [
     path: 'pages',
     component: Pages,
     children: [
-      { path: 'profile', loadChildren: './profile/profile.module#ProfileModule'},
+      { path: 'profile', loadChildren: './profile/profile.module#ProfileModule' },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
       { path: 'editors', loadChildren: './editors/editors.module#EditorsModule' },
@@ -27,7 +27,8 @@ export const routes: Routes = [
       { path: 'ui', loadChildren: './ui/ui.module#UiModule' },
       { path: 'forms', loadChildren: './forms/forms.module#FormsModule' },
       { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
-      { path: 'maps', loadChildren: './maps/maps.module#MapsModule' }
+      { path: 'maps', loadChildren: './maps/maps.module#MapsModule' },
+      { path: 'skills', loadChildren: './skills/skills.module#SkillsModule' }
     ]
   }
 ];
